@@ -39,9 +39,9 @@ def contact():
         
         
 
-@app.route('/careers')
-def careers():
-        return render_template("careers.html", page_title="Portfolio")  
+@app.route('/recipes')
+def recipes():
+        return render_template("recipes.html", page_title="Recipes")  
         
                 
         
