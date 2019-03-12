@@ -9,6 +9,10 @@ app.secret_key = 'some_secret'
 def index():
     return render_template("index.html")
     
+@app.route('/') 
+def help():
+    return render_template("help.html")
+    
     
 @app.route('/about')
 def about():
