@@ -50,6 +50,11 @@ def recipes():
 @app.route('/detailpage')
 def detailpage():
         return render_template("detailpage.html", page_title="Detailpage")                  
+
+
+@app.route('/instruction')
+def instruction():
+        return render_template("instruction.html", page_title="Instruction")    
         
     
 if __name__ == '__main__':

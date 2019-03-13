@@ -28,18 +28,19 @@
 .col-md-6{
     color:white;
     background-color: rgba(45,179,150,.8);
-    height: 300px;
+    height: 500px;
     width: 400px;
     text-align:left;
     border-style: solid;
     border-color:white;
     border-width: thick; 
     line-height: 1.1; 
+    font-size: 18px;
    
     
 }  
 .col-md-8{
-    background-image: url(/static/img/dish-img5.jpg);
+    background-image: url(/static/img/salat.jpg);
 
     color:white;
     background-color:grey;
@@ -53,8 +54,8 @@
     
 }   
 
-.col-md-2{
-    color:black;
+.col-md-4{
+    color:#333333;
     background-color:white;
     height: 300px;
     width: 400px;
@@ -216,7 +217,6 @@
 
 .button2, input{
     background-color: white;
-    width: 50px; 
     line-height: normal;
     border-style:solid;
     border:none;
@@ -246,4 +246,8 @@ h2 a {
 
 .empty{
     background-color: white;
+}
+
+.form2{
+    height: 100px
 }
