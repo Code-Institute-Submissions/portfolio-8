@@ -11,7 +11,9 @@
   height: auto;
 }
 
-
+.row{
+    margin-left:0;
+}
 
 .flag{
     margin-right: 1px; 
@@ -25,6 +27,21 @@
 
 .col-md-6{
     color:white;
+    background-color: rgba(45,179,150,.8);
+    height: 300px;
+    width: 400px;
+    text-align:left;
+    border-style: solid;
+    border-color:white;
+    border-width: thick; 
+    line-height: 1.1; 
+   
+    
+}  
+.col-md-8{
+    background-image: url(/static/img/dish-img5.jpg);
+
+    color:white;
     background-color:grey;
     height: 300px;
     width: 400px;
@@ -32,8 +49,22 @@
     border-style: solid;
     border-color:white;
     border-width: thick; 
+     margin-top:25px;
     
 }   
+
+.col-md-2{
+    color:black;
+    background-color:white;
+    height: 300px;
+    width: 400px;
+    text-align:left;
+    border-style: solid;
+    border-color:white;
+    border-width: thick; 
+ margin-top:25px;
+    
+}  
 
 .recipe1{
     background-image: url(/static/img/dish-img1.jpg);
@@ -99,6 +130,12 @@
 }
 
 
+.form-inline{
+ margin-bottom: 50px; 
+ margin-top: 20px;
+ margin-left: 5px; 
+}
+
 .dropdown{
     margin-bottom: 50px; 
 }
@@ -109,6 +146,11 @@
     
 }
 
+.form-inline .custom-control{
+    margin-left: 15px; 
+    margin-top: 15px;
+}
+
 .recipes-container{
     height: 300px;
 }
@@ -117,8 +159,7 @@
     width: 100%;
     height: 100%;
     color: white;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 20px;
     background-color: rgba(45,179,150,.8);
     display: -webkit-box;
     display: flex;
@@ -144,7 +185,7 @@
 }
 
 .recipe-search-block form input[type="search"] {
-    font-family: Roboto,sans-serif;
+    font-family: Calibri,sans-serif;
     background-image: url(/themes/kitchen/dist/images/search-icon-red.svg);
     background-repeat: no-repeat;
     background-position: center right;
@@ -173,10 +214,36 @@
     margin-top: 20px
 }
 
-.button, input{
-    background-color: orange;
+.button2, input{
+    background-color: white;
+    width: 50px; 
+    line-height: normal;
+    border-style:solid;
+    border:none;
+    margin-top:20px;
 }
 
 h2 {
     font-weight:100;
+    margin-top: 20px
+}
+
+h2 a {
+    color: #ff3838;
+    font-size: 50px; 
+    font-weight: bolder; 
+}
+
+
+.h1{
+    margin-top: 20px;
+}
+
+.detailpage p{
+    text-align: left; 
+    margin: 10px; 
+}
+
+.empty{
+    background-color: white;
 }

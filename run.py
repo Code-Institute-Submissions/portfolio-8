@@ -38,7 +38,7 @@ def about_member(member_name):
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
-        flash("Thanks, {}, we have recieved your message!".format(request.form["name"]))
+        flash("Thanks, {}, I have recieved your message!".format(request.form["name"]))
     return render_template("contact.html", page_title="Contact")
         
         
@@ -47,7 +47,9 @@ def contact():
 def recipes():
         return render_template("recipes.html", page_title="Recipes")  
         
-                
+@app.route('/detailpage')
+def detailpage():
+        return render_template("detailpage.html", page_title="Detailpage")                  
         
     
 if __name__ == '__main__':

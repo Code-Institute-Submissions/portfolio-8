@@ -13,42 +13,70 @@
  <div class="textual-inner">
 
   <h1>
-   <div class="field field--name-field-title field--type-string field--label-hidden field__item">What is on the menu?</div>
+   <div class="field field--name-field-title field--type-string field--label-hidden field__item">Recipe categories</div>
   </h1>
 
-  <form class="kitchen-search-small-form form-reset" data-drupal-selector="kitchen-search-small-form" novalidate="novalidate" action="/recepten" method="post" id="kitchen-search-small-form" accept-charset="UTF-8">
-   <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-termen form-item-termen">
+  <form class="form-inline">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Recipe name</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+   
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+   <form class="form-inline">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Author</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+   
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  
+   <form class="form-inline">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Cuisine region</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+   
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  
+   <form class="form-inline">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Allergens</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+   
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
 
-   </div>
-   <div class="search-filter-wrapper">
-    <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-soort-gerecht form-item-soort-gerecht">
-     <label for="edit-soort-gerecht"><span class="label-wrapper">Recipe region</span></label>
-     <select data-drupal-selector="edit-soort-gerecht" id="edit-soort-gerecht" name="soort_gerecht" class="form-select"><option value="" selected="selected">Soort gerecht</option><option value="pasta-100">Pasta</option><option value="ovenschotel-101">Ovenschotel</option><option value="rijst-102">Rijst</option><option value="aardappel-103">Aardappel</option><option value="groenten-104">Groenten</option><option value="eigerechten-105">Eigerechten</option><option value="koekjes-28">Koekjes</option><option value="salades-27">Salades</option><option value="sauzen-32">Sauzen</option><option value="soep-26">Soep</option><option value="taarten-cakes-29">Taarten &amp; cakes</option><option value="drankjes-33">Drankjes</option><option value="brood-36">Brood</option><option value="zoete-snacks-35">Zoete snacks</option><option value="hartige-snacks-30">Hartige snacks</option></select>
-    </div>
-    <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-menugang form-item-menugang">
-     <label for="edit-menugang"><span class="label-wrapper">Ratings/Upvotes</span></label>
-     <select data-drupal-selector="edit-menugang" id="edit-menugang" name="menugang" class="form-select"><option value="" selected="selected">Menugang</option><option value="bijgerecht-93">Bijgerecht</option><option value="hoofdgerecht-21">Hoofdgerecht</option><option value="voorgerecht-20">Voorgerecht</option><option value="nagerecht-24">Nagerecht</option><option value="lunchgerecht-23">Lunchgerecht</option><option value="ontbijtgerecht-25">Ontbijtgerecht</option><option value="snack-99">Snack</option></select>
-    </div>
-    <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-keuken form-item-keuken">
-     <label for="edit-keuken"><span class="label-wrapper">Author</span></label>
-     <select data-drupal-selector="edit-keuken" id="edit-keuken" name="keuken" class="form-select"><option value="" selected="selected">Keuken</option><option value="arabisch-5">Arabisch</option><option value="australisch-19">Australisch</option><option value="aziatisch-4">Aziatisch</option><option value="belgisch-19347">Belgisch</option><option value="frans-12">Frans</option><option value="indisch-17">Indisch</option><option value="italiaans-8">Italiaans</option><option value="nederlands-7">Nederlands</option><option value="noord-amerikaans-10">Noord-Amerikaans</option><option value="oost-europees-11">Oost-Europees</option><option value="scandinavisch-18">Scandinavisch</option><option value="spaans-13">Spaans</option><option value="verenigd-koninkrijk-15">Verenigd Koninkrijk</option><option value="zuid-afrikaans-16">Zuid-Afrikaans</option><option value="zuid-amerikaans-14">Zuid-Amerikaans</option><option value="mediterraans-106">Mediterraans</option></select>
-    </div>
-    <input autocomplete="off" data-drupal-selector="form-czqtka0-0la-m4qebjufetqbsuaqhjgxorgn4djb05s" type="hidden" name="form_build_id" value="form-CzQtka0-0la_M4QEbJufeTQbSuAQHJGXORgN4dJb05s" />
-    <input data-drupal-selector="edit-kitchen-search-small-form" type="hidden" name="form_id" value="kitchen_search_small_form" />
-    <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Search recipes" class="button js-form-submit form-submit" />
+
+  <div class="custom-control custom-checkbox my-1 mr-sm-2">
+    <input type="checkbox" class="custom-control-input" id="customControlInline">
+    <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary my-1">Show results</button>
+</form>
+</div>
 
     </div>
 
     <div class="container-recipes">
-     <h2>Share your recipe</h2>
+     <h2>Add your recipes here</h2>
      <div class="dropdown">
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-       <button type="button" class="btn btn-secondary">Add recipe</button>
+       <button type="button" class="btn btn-secondary">&#43; Add recipe</button>
        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Help
     <span class="caret"></span></button>
        <ul class="dropdown-menu">
         <li><a href="/contact">Contact me</a></li>
-        <li><a href="/help">Upload instruction</a></li>
+        <li><a href="/help">Instruction</a></li>
        </ul>
       </div>
      </div>
@@ -60,7 +88,7 @@
       <div class="row">
        <div class="recipe1 col-md-6">
         <div class="clr-block"></div>
-        <h2>Recipe 1</h2>
+        <h2><a href="/detailpage">heading</a></h2>
         <span>
          <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
         </span>
@@ -71,23 +99,23 @@
        
 
        <div class="recipe2 col-md-6">
-        <h2>Recipe 2</h2>
+        <h2><a href="detailpage">heading</a></h2>
          <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
        </div>
 
        <div class="recipe3 col-md-6">
-        <h2>Recipe 3</h2>
+        <h2><a href="detailpage">heading</a></h2>
          <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
         </ul>
        </div>
 
        <div class="recipe4 col-md-6">
-        <h2>Recipe 4</h2>
+        <h2><a href="detailpage">heading</a></h2>
          <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
        </div>
 
        <div class="recipe5 col-md-6">
-        <h2>Recipe 5</h2>
+        <h2><a href="detailpage">heading</a></h2>
 
 
          <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
@@ -95,12 +123,23 @@
        </div>
 
        <div class="recipe6 col-md-6">
-        <h2>Recipe 6</h2>
+       <h2><a href="detailpage">heading</a></h2>
+         <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
+
+       </div>
+
+ <div class="recipe6 col-md-6">
+       <h2><a href="detailpage">heading</a></h2>
          <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
 
        </div>
 
 
+ <div class="recipe6 col-md-6">
+       <h2><a href="detailpage">heading</a></h2>
+         <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
+
+       </div>
 
 
 
