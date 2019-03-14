@@ -54,7 +54,12 @@ def detailpage():
 
 @app.route('/instruction')
 def instruction():
-        return render_template("instruction.html", page_title="Instruction")    
+        return render_template("instruction.html", page_title="Instruction")   
+
+@app.route('/addrecipes')
+def addrecipes():
+        return render_template("addrecipes.html", page_title="Add recipes")            
+        
         
     
 if __name__ == '__main__':

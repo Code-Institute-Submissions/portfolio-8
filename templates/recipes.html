@@ -1,162 +1,170 @@
 {% extends 'base.html' %} {% block content %}
 
+
+
 <h2> {{ page_title }} </h2>
 
 <p>
- I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Apart from being a web developer,
- I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking. When forced indoors, I follow a number of sci-fi and fantasy
- genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.
-
+ The perfect combination of old favorites and brand new recipes! With a lot of never-before-seen Tasty dishes and treats, this blog is your base for delicious italian dishes. Recipes for minimalists, maximalists, and everyone in between. 
+ Whether you're trying to learn the ins and outs of cooking or you want to create over-the-top dishes that are truly Instagram-worthy, it's covered. The only rule? It's gotta be Tasty!
 </p>
 
-<div class="textual">
- <div class="textual-inner">
+<div class="menu-container">
+ <div class="row">
+  <div class="col-md-6">
 
-  <h1>
-   <div class="field field--name-field-title field--type-string field--label-hidden field__item">Recipe categories</div>
-  </h1>
-
-  <form class="form-inline">
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Recipe name</label>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-   
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-   <form class="form-inline">
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Author</label>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-   
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-  
-   <form class="form-inline">
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Cuisine region</label>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-   
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-  
-   <form class="form-inline">
-  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Allergens</label>
-  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-   
-    <option selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-
-
-  <div class="custom-control custom-checkbox my-1 mr-sm-2">
-    <input type="checkbox" class="custom-control-input" id="customControlInline">
-    <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+ <div class="form-group">
+    <label for="exampleFormControlSelect2">Recipe name</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>Aglio e olio</option>
+      <option>Ariabatta</option>
+      <option>Scampi lemone</option>
+      <option>Pizze mozarella</option>
+      <option>Bruchette</option>
+    </select>
   </div>
 
-  <button type="submit" class="btn btn-primary my-1">Show results</button>
-</form>
 </div>
 
-    </div>
+  <div class="col-md-6">
+ 
+ <div class="form-group">
+    <label for="exampleFormControlSelect2">Author</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>Anna</option>
+      <option>Anthony</option>
+      <option>Niels</option>
+    </select>
+  </div>
+  </div>
 
-    <div class="container-recipes">
-     <h2>Add your recipes here</h2>
-     <div class="dropdown">
-      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-       <button type="button" class="btn btn-secondary">&#43; Add recipe</button>
-       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Help
+</div>
+
+<div class="row">
+
+<div class="col-md-6">
+ <div class="form-group">
+    <label for="exampleFormControlSelect2">Cuisine region</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>Tuscany</option>
+      <option>Sicily</option>
+      <option>Roma</option>
+      <option>Abruzzo</option>
+    </select>
+  </div>  
+  
+  </div>
+
+<div class="col-md-6">
+
+ <div class="form-group">
+    <label for="exampleFormControlSelect2">Allergens</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>Nuts</option>
+      <option>Wheet</option>
+      <option>Oatmilk</option>
+    </select>
+  </div>  
+
+</div>
+</div>
+</div>
+
+<input class="btn btn-primary" type="submit" value="Show results">
+<input class="btn btn-secondary" type="reset" value="Reset">
+
+
+
+
+<div class="container-recipes">
+ <h2>Add your recipes here</h2>
+ <div class="dropdown">
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+   
+   
+   <a class="btn btn-secondary" href="/addrecipes" role="button">&#43; Add recipes</a>
+
+   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Help
+
+   
     <span class="caret"></span></button>
-       <ul class="dropdown-menu">
-        <li><a href="/contact">Contact me</a></li>
-        <li><a href="/instruction">Instruction</a></li>
-       </ul>
-      </div>
-     </div>
+    
+ 
+    
 
+     
+     
+   <ul class="dropdown-menu">
+    <li><a href="/contact">Contact me</a></li>
+    <li><a href="/instruction">Instruction</a></li>
+   </ul>
+  </div>
+ </div>
 
-
-
-     <div class="recipes-container">
-      <div class="row">
-       <div class="recipe1 col-md-6">
-        <div class="clr-block"></div>
-        <h2><a href="/detailpage">heading</a></h2>
-        <span>
+ <div class="recipes-container">
+  <div class="row">
+   <div class="recipe1 col-md-6">
+    <div class="clr-block"></div>
+    <h2><a href="/detailpage">Recipe1</a></h2>
+    <span>
          <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
         </span>
-        
-      
-       </div>
-       
-       
+   </div>
 
-       <div class="recipe2 col-md-6">
-        <h2><a href="detailpage">heading</a></h2>
-         <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
-       </div>
+   <div class="recipe2 col-md-6">
+    <h2><a href="detailpage">Recipe2</a></h2>
+    <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
+   </div>
 
-       <div class="recipe3 col-md-6">
-        <h2><a href="detailpage">heading</a></h2>
-         <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
-        </ul>
-       </div>
+   <div class="recipe3 col-md-6">
+    <h2><a href="detailpage">Recipe3</a></h2>
+    <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
+    </ul>
+   </div>
 
-       <div class="recipe4 col-md-6">
-        <h2><a href="detailpage">heading</a></h2>
-         <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
-       </div>
+   <div class="recipe4 col-md-6">
+    <h2><a href="detailpage">Recipe4</a></h2>
+    <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
+   </div>
 
-       <div class="recipe5 col-md-6">
-        <h2><a href="detailpage">heading</a></h2>
+   <div class="recipe5 col-md-6">
+    <h2><a href="detailpage">Recipe5</a></h2>
 
 
-         <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
+    <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
 
-       </div>
+   </div>
 
-       <div class="recipe6 col-md-6">
-       <h2><a href="detailpage">heading</a></h2>
-         <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
+   <div class="recipe6 col-md-6">
+    <h2><a href="detailpage">Recipe6</a></h2>
+    <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
 
-       </div>
+   </div>
 
- <div class="recipe6 col-md-6">
-       <h2><a href="detailpage">heading</a></h2>
-         <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
+   <div class="recipe6 col-md-6">
+    <h2><a href="detailpage">Recipe7</a></h2>
+    <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
 
-       </div>
-
-
- <div class="recipe6 col-md-6">
-       <h2><a href="detailpage">heading</a></h2>
-         <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
-
-       </div>
+   </div>
 
 
+   <div class="recipe6 col-md-6">
+    <h2><a href="detailpage">Recipe8</a></h2>
+    <p>&#9733;&#9733;&#9733;&#9733;&#x2606;</p>
+
+   </div>
 
 
+   <script>
+    $(document).ready(function() {
+     $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $(".dropdown-menu li").filter(function() {
+       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+     });
+    });
+   </script>
 
 
-
-       <script>
-        $(document).ready(function() {
-         $("#myInput").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          $(".dropdown-menu li").filter(function() {
-           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
-         });
-        });
-       </script>
-
-
-{% endblock %}
+   {% endblock %}
