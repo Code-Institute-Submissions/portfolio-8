@@ -11,9 +11,7 @@
   height: auto;
 }
 
-.row{
-    margin-bottom: 100px
-}
+
 
 .flag{
     margin-right: 1px; 
@@ -71,6 +69,7 @@ my-3 p{
     color: white; 
     font-weight: bold;
     border:5px;
+    height: 300px; 
 
 }
 
@@ -95,6 +94,7 @@ my-3 p{
     background-image: url(/static/img/dish-img2.jpg);
     color: white;
     font-weight: bold;
+      height: 300px; 
     
 
 }
@@ -103,6 +103,7 @@ my-3 p{
     background-image: url(/static/img/dish-img3.jpg);
     color: white;
     font-weight: bold;
+      height: 300px; 
 
 }
 
@@ -111,6 +112,7 @@ my-3 p{
     background-image: url(/static/img/dish-img4.jpg);
     color: white;
     font-weight: bold;
+      height: 300px; 
 
 }
 
@@ -119,6 +121,7 @@ my-3 p{
     background-image: url(/static/img/dish-img5.jpg);
     color: white;
     font-weight: bold;
+      height: 300px; 
 
 }
 
@@ -127,6 +130,7 @@ my-3 p{
     background-image: url(/static/img/dish-img6.jpg);
     color: white;
     font-weight: bold;
+      height: 300px; 
 
 }
 
@@ -279,4 +283,16 @@ h2 a {
 
 #img-upload{
     width: 100%;
+}
+
+.menu-container{
+    height: 400px; 
+}
+
+.container-heading{
+    margin-top: 100px; 
+}
+
+.form-control{
+    width: 250px;
 }
