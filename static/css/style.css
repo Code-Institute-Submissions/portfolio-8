@@ -6,12 +6,18 @@
     margin-bottom: 50px; 
 }
 
+.col-md-4{
+    display:block;
+}
+
 .kitchen img{
   width: 100%;
   height: auto;
 }
 
-
+.form-group a{
+    font-weight: bold; 
+}
 
 .flag{
     margin-right: 1px; 
@@ -27,6 +33,10 @@
 
 my-3 p{
     margin-top: 0px;
+}
+
+col-sm-3 a{
+    font-weight: bold; 
 }
 
 .related-projects{
@@ -218,7 +228,7 @@ my-3 p{
 }
 
 .container-recipes{
-    margin-top: 20px
+    margin-top: 60px
 }
 
 .button2, input{
@@ -295,4 +305,9 @@ h2 a {
 
 .form-control{
     width: 250px;
+}
+
+.h2, h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }

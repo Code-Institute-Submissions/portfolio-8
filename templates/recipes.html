@@ -9,13 +9,15 @@
  Whether you're trying to learn the ins and outs of cooking or you want to create over-the-top dishes that are truly Instagram-worthy, it's covered. The only rule? It's gotta be Tasty!
 </p>
 
+<h2>Preferences</h2>
+
 <div class="container">
  <div class="row">
   
-  <div class="col-sm-3">
+  <div class="col-sm-4">
 
    <div class="form-group">
-    <label for="exampleFormControlSelect2">Recipe name</label>
+    <label for="exampleFormControlSelect2">Dish type</label>
     <select multiple class="form-control" id="exampleFormControlSelect2">
       <option>Aglio e olio</option>
       <option>Ariabatta</option>
@@ -26,7 +28,7 @@
   </div>
 </div>
 
-  <div class="col-sm-3">
+  <div class="col-sm-4">
     <label for="exampleFormControlSelect2">Author</label>
     <select multiple class="form-control" id="exampleFormControlSelect2">
       <option>Anna</option>
@@ -35,6 +37,8 @@
     </select>
   </div>
  </div>
+
+ <div class="row">
 
 <div class="col-sm-3">
  <div class="form-group">
@@ -58,12 +62,36 @@
     </select>
   </div>  
  </div> 
+ 
 
+ 
+ <div class="col-sm-3">
+ <div class="form-group">
+    <label for="exampleFormControlSelect2">Difficulty</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>Easy</option>
+      <option>Medium</option>
+      <option>Expert</option>
+    </select>
+  </div>  
+ </div> 
+ 
+ <div class="col-sm-3">
+ <div class="form-group">
+    <label for="exampleFormControlSelect2">Cooking time</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>15 - 20 min. </option>
+      <option>20 - 45 min. </option>
+      <option>45 - 120 min. </option>
+    </select>
+  </div>  
+ </div> 
 </div>
 
 <input class="btn btn-primary" type="submit" value="Show results">
 <input class="btn btn-secondary" type="reset" value="Reset">
 
+<p>You can see the results of your filtered preferences below in the recipes list.</p>
 
 <div class="container-recipes">
  <h2>Add your recipes here</h2>
@@ -75,11 +103,22 @@
   </div>
   
    <span class="caret"></span></button>
-     <a class="btn btn-secondary" href="/addrecipes" role="button">&#43; Add recipes</a>
-   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Help
-  
+     <a class="btn btn-primary" href="/addrecipes" role="button">&#43; Add your recipe
+     </a>
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Help
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="/contact">Contact me</a>
+    <a class="dropdown-item" href="/instruction">Add recipe instruction</a>
+  </div>
+
   
   </div>
+  
+  
+  
   
   
   
@@ -92,10 +131,10 @@
   <div class="row">
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#">Project One</a>
+            <a href="/detailpage">Recipe One</a>
           </h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
         </div>
@@ -103,10 +142,10 @@
     </div>
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#">Project Two</a>
+            <a href="/detailpage">Recipe Two</a>
           </h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
@@ -117,7 +156,7 @@
         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#">Project Three</a>
+            <a href="/detailpage">Recipe Three</a>
           </h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
         </div>
@@ -125,10 +164,10 @@
     </div>
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#">Project Four</a>
+            <a href="/detailpage">Recipe Four</a>
           </h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
@@ -136,10 +175,10 @@
     </div>
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#">Project Five</a>
+            <a href="/detailpage">Recipe Five</a>
           </h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
         </div>
@@ -147,10 +186,10 @@
     </div>
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#">Project Six</a>
+            <a href="/detailpage">Recipe Six</a>
           </h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
         </div>

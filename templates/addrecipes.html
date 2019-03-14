@@ -1,107 +1,112 @@
-
 {% extends 'base.html' %} {% block content %}
 
 <h2> {{ page_title }} </h2>
 
-<form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Recipe name</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Cuisine region</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Persons</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Ingriedients</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Cooking instruction</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-</form>
-
 <div class="container">
-<div class="col-md-6">
-    <div class="form-group">
-        <label>Upload Image</label>
-        <div class="input-group">
-            <span class="input-group-btn">
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Recipe name</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Cuisine region</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Persons</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Ingriedients</label>
+          <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Cooking instruction</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </form>
+    </div>
+
+
+          <div class="form-group">
+            <label>Upload Image</label>
+            <div class="input-group">
+              <span class="input-group-btn">
                 <span class="btn btn-default btn-file">
                     Browse… <input type="file" id="imgInp">
                 </span>
-            </span>
-            <input type="text" class="form-control" readonly>
+              </span>
+              <input type="text" class="form-control" readonly>
+            </div>
+            <img id='img-upload' />
+          </div>
+          
+          
+          
+          
         </div>
-        <img id='img-upload'/>
+
+
+        <input class="btn btn-primary" type="submit" value="Add recipe">
+        <input class="btn btn-secondary" type="reset" value="Reset">
+      </div>
     </div>
+  </div>
 </div>
-</div>
-
-
-
-<input class="btn btn-primary" type="submit" value="Add recipe">
-<input class="btn btn-secondary" type="reset" value="Reset">
-
-<script
-			  src="http://code.jquery.com/jquery-3.3.1.js"
-			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-			  crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
 <script>
-$(document).ready( function() {
-    	$(document).on('change', '.btn-file :file', function() {
-		var input = $(this),
-			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-		input.trigger('fileselect', [label]);
-		});
+  $(document).ready(function() {
+    $(document).on('change', '.btn-file :file', function() {
+      var input = $(this),
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+      input.trigger('fileselect', [label]);
+    });
 
-		$('.btn-file :file').on('fileselect', function(event, label) {
-		    
-		    var input = $(this).parents('.input-group').find(':text'),
-		        log = label;
-		    
-		    if( input.length ) {
-		        input.val(log);
-		    } else {
-		        if( log ) alert(log);
-		    }
-	    
-		});
-		function readURL(input) {
-		    if (input.files && input.files[0]) {
-		        var reader = new FileReader();
-		        
-		        reader.onload = function (e) {
-		            $('#img-upload').attr('src', e.target.result);
-		        }
-		        
-		        reader.readAsDataURL(input.files[0]);
-		    }
-		}
+    $('.btn-file :file').on('fileselect', function(event, label) {
 
-		$("#imgInp").change(function(){
-		    readURL(this);
-		}); 	
-	});
+      var input = $(this).parents('.input-group').find(':text'),
+        log = label;
 
+      if (input.length) {
+        input.val(log);
+      }
+      else {
+        if (log) alert(log);
+      }
+
+    });
+
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+          $('#img-upload').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#imgInp").change(function() {
+      readURL(this);
+    });
+  });
 </script>
 
 {% endblock %}
