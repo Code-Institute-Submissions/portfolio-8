@@ -59,7 +59,10 @@ def instruction():
 @app.route('/addrecipes')
 def addrecipes():
         return render_template("addrecipes.html", page_title="Add recipes")            
-        
+
+@app.route('/recipesfollow')
+def recipesfollow():
+        return render_template("recipesfollow.html", page_title="Second page")             
         
     
 if __name__ == '__main__':

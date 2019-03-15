@@ -4,128 +4,6 @@
 
 <h2> {{ page_title }} </h2>
 
-<p>
- The perfect combination of old favorites and brand new recipes! With a lot of never-before-seen Tasty dishes and treats, this blog is your base for delicious italian dishes. Recipes for minimalists, maximalists, and everyone in between. 
- Whether you're trying to learn the ins and outs of cooking or you want to create over-the-top dishes that are truly Instagram-worthy, it's covered. The only rule? It's gotta be Tasty!
-</p>
-
-<h2>Preferences</h2>
-
-<div class="container">
- <div class="row">
-  
-  <div class="col-sm-4">
-
-   <div class="form-group">
-    <label for="exampleFormControlSelect2">Dish type</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>Aglio e olio</option>
-      <option>Ariabatta</option>
-      <option>Scampi lemone</option>
-      <option>Pizze mozarella</option>
-      <option>Bruchette</option>
-    </select>
-  </div>
-</div>
-
-  <div class="col-sm-4">
-    <label for="exampleFormControlSelect2">Author</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>Anna</option>
-      <option>Anthony</option>
-      <option>Niels</option>
-    </select>
-  </div>
- </div>
-
- <div class="row">
-
-<div class="col-sm-3">
- <div class="form-group">
-    <label for="exampleFormControlSelect2">Cuisine region</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>Tuscany</option>
-      <option>Sicily</option>
-      <option>Roma</option>
-      <option>Abruzzo</option>
-    </select>
-  </div>  
-  </div> 
-  
-  <div class="col-sm-3">
- <div class="form-group">
-    <label for="exampleFormControlSelect2">Allergens</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>Nuts</option>
-      <option>Wheet</option>
-      <option>Oatmilk</option>
-    </select>
-  </div>  
- </div> 
- 
-
- 
- <div class="col-sm-3">
- <div class="form-group">
-    <label for="exampleFormControlSelect2">Difficulty</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>Easy</option>
-      <option>Medium</option>
-      <option>Expert</option>
-    </select>
-  </div>  
- </div> 
- 
- <div class="col-sm-3">
- <div class="form-group">
-    <label for="exampleFormControlSelect2">Cooking time</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>15 - 20 min. </option>
-      <option>20 - 45 min. </option>
-      <option>45 - 120 min. </option>
-    </select>
-  </div>  
- </div> 
-</div>
-
-<input class="btn btn-primary" type="submit" value="Show results">
-<input class="btn btn-secondary" type="reset" value="Reset">
-
-<p>You can see the results of your filtered preferences below in the recipes list.</p>
-
-<div class="container-recipes">
- <h2>Add your recipes here</h2>
- <div class="dropdown">
-  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-   
-   
-
-  </div>
-  
-   <span class="caret"></span></button>
-     <a class="btn btn-primary" href="/addrecipes" role="button">&#43; Add your recipe
-     </a>
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Help
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="/contact">Contact me</a>
-    <a class="dropdown-item" href="/instruction">Add recipe instruction</a>
-  </div>
-
-  
-  </div>
-  
-  
-  
-  
-  
-  
-  <!-- Page Content -->
-<div class="container">
-
-  <!-- Page Heading -->
 
 
   <div class="row">
@@ -201,7 +79,7 @@
   <!-- Pagination -->
   <ul class="pagination justify-content-center">
     <li class="page-item">
-      <a class="page-link" href="/recipesfollow" aria-label="Previous">
+      <a class="page-link" href="#" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
             <span class="sr-only">Previous</span>
           </a>
@@ -216,7 +94,7 @@
       <a class="page-link" href="#">3</a>
     </li>
     <li class="page-item">
-      <a class="page-link" href="/recipesfollow" aria-label="Next">
+      <a class="page-link" href="#" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
             <span class="sr-only">Next</span>
           </a>
@@ -224,20 +102,9 @@
   </ul>
 
 </div>
-<!-- /.container -->
+
   
 
-
-   <script>
-    $(document).ready(function() {
-     $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $(".dropdown-menu li").filter(function() {
-       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-     });
-    });
-   </script>
 
 
    {% endblock %}

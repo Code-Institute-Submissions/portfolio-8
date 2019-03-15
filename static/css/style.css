@@ -304,10 +304,25 @@ h2 a {
 }
 
 .form-control{
-    width: 250px;
+    width: 280px;
 }
+
+.form-control1{
+    width: 400px;
+}
+
+
 
 .h2, h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+}
+
+.btn-file{
+    background-color: #0085a1; 
+    border-color: #0085a1; 
+}
+
+.btn{
+    color: white;
 }
