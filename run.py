@@ -7,7 +7,7 @@ app.secret_key = 'some_secret'
 
 @app.route('/') 
 def index():
-    return render_template("index.html")
+    return render_template("index.html", page_title="Home")  
     
 @app.route('/') 
 def help():
@@ -40,6 +40,9 @@ def contact():
     if request.method == "POST":
         flash("Thanks, {}, I have recieved your message!".format(request.form["name"]))
     return render_template("contact.html", page_title="Contact")
+        
+
+
         
         
 

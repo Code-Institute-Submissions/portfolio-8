@@ -407,14 +407,28 @@ footer .copyright {
     font-family: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif
 }
 
-.btn-primary {
+.btn-primary-results {
+    background-color: #0085a1;
+    border-color: #0085a1;
+    margin-top:18px;
+}
+
+.btn-primary-results:active,
+.btn-primary-results:focus,
+.btn-primary-results:hover {
+    color: #fff;
+    background-color: #00657b!important;
+    border-color: #00657b!important
+}
+
+.btn-primary-add {
     background-color: #0085a1;
     border-color: #0085a1
 }
 
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
+.btn-primary-add:active,
+.btn-primary-add:focus,
+.btn-primary-add:hover {
     color: #fff;
     background-color: #00657b!important;
     border-color: #00657b!important

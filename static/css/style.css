@@ -69,7 +69,7 @@ col-sm-3 a{
     border-style: solid;
     border-color:white;
     border-width: thick; 
- margin-top:25px;
+
     
 }  
 
@@ -325,4 +325,8 @@ h2 a {
 
 .btn{
     color: white;
+}
+
+.btn-primary1{
+    margin-top: 18px;
 }
