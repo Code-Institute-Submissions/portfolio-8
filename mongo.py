@@ -16,11 +16,11 @@ def mongo_connect(url):
 
 def get_record():
     print("")
-    first = input("Enter recipe name > ")
-    last = input("Enter recipe description > ")
+    recipe_name = input("Enter recipe name > ")
+    description = input("Enter recipe description > ")
 
     try:
-        doc = coll.find_one({'first': first.lower(), 'last': last.lower()})
+        doc = coll.find_one({'recipe_name': recipe_name.lower(), 'description': description.lower()})
     except:
         print("Error accessing the database")
     
@@ -29,7 +29,6 @@ def get_record():
         print("Error! No results found.")
     
     return doc
-
 
 
 def show_menu():    
@@ -46,17 +45,17 @@ def show_menu():
 
 def add_record():
     print("")
-    name = input("Enter recipe name > ")
-    desc = input("Enter recipe description > ")
-    dtype = input("Enter dish type > ")
-    author = input("Enter author name > ")
-    region = input("cuisine region > ")
+    recipe_name = input("Enter recipe name > ")
+    description = input("Enter recipe description > ")
+    dish_type = input("Enter dish type > ")
+    author_name = input("Enter author name > ")
+    cuisine_region = input("cuisine region > ")
     difficulty = input("Enter difficulty > ")
     allergens = input("Enter allergens > ")
 
-    new_doc = {'first': name.lower(), 'last': desc.lower(), 'dob': dtype,
-               'gender': author, 'hair_colour': region, 'occupation':
-               difficulty, 'nationality': allergens}
+    new_doc = {'recipe_name': recipe_name.lower(), 'description': description.lower(), 'dish_type': dish_type,
+               'author_name': author_name, 'cuisine_region': cuisine_region, 'difficulty':
+               difficulty, 'allergens': allergens}
     
     try:
         coll.insert(new_doc)
@@ -65,6 +64,56 @@ def add_record():
     except:
         print("Error accessing the database")
 
+def find_record():
+    doc = get_record()
+    if doc:
+        print("")
+        for k, v in doc.items():
+            if k != "_id":
+                print(k.capitalize() + ": " + v.capitalize())
+
+
+def edit_record():
+    doc = get_record()
+    if doc:
+        update_doc = {}
+        print("")
+        for k, v in doc.items():
+            if k != "_id":
+                update_doc[k] = input(k.capitalize() + " [" + v + "] > ")
+
+                if update_doc[k] == "":
+                    update_doc[k] = v
+        
+        try:
+            coll.update_one(doc, {'$set': update_doc})
+            print("")
+            print("Document updated")
+        except:
+            print("Error accessing the database")
+
+
+def delete_record():
+
+    doc = get_record()
+
+    if doc:
+        print("")
+        for k, v in doc.items():
+            if k != "_id":
+                print(k.capitalize() + ": " + v.capitalize())
+        
+        print("")
+        confirmation = input("Is this the document you want to delete?\nY or N > ")
+        print("")
+
+        if confirmation.lower() == 'y':
+            try:
+                coll.remove(doc)
+                print("Document deleted!")
+            except:
+                print("Document not deleted")
+
 
 def main_loop():
     while True:
@@ -72,11 +121,11 @@ def main_loop():
         if option == "1":
             add_record()
         elif option == "2":
-            print("You have selected option 2")
+            find_record()
         elif option == "3":
-            print("You have selected option 3")
+            edit_record()
         elif option == "4":
-            print("You have selected option 4")
+            delete_record()
         elif option == "5":
             conn.close()
             break
