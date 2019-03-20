@@ -1,30 +1,52 @@
 {% extends 'base.html' %} {% block content %}
 
+    {% for recipes in addrecipes %}
+        {{addrecipe.recipe_name}}
+        {{addrecipe.description}}
+        {{addrecipe.author_name}}
+        {{addrecipe.cuisine_region}}
+        {{addrecipe.difficulty}}
+        {{addrecipe.allergens}}
+        {{addrecipe.cooking_time}}
+        {{addrecipe.cooking_instruction}}
+        {{addrecipe.ingredients}}
+    {% endfor %}
+
+
+
 <h2> {{ page_title }} </h2>
 
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <form>
+      <form action="{{url_for('insert_recipe') }}" method="POST">
         
           <div class="form-group">
         <label for="exampleFormControlInput1">Your name</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Displayed as the author's name">
+        <input type="text" class="form-control" name="author_name" id="author_name" placeholder="Displayed as the author's name">
       </div>
+        
         
         <div class="form-group">
           <label for="exampleFormControlInput1">Recipe name</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Name of your dish">
+          <input type="text" class="form-control" name="description" id="description" placeholder="Name of your dish">
         </div>
         
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Dish type</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="In example 'Pizza' or 'Risotto'">
-        </div>
+        
+         <div class="form-group">
+        <label for="exampleFormControlSelect2">Dish Type</label>
+        <select multiple class="form-control" name="dish_type" id="dish_type">
+      <option>Antipasti</option>
+      <option>Risotto</option>
+      <option>Pizza</option>
+      <option>Pasta</option>
+      <option>Rice</option>
+    </select>
+      </div>
         
            <div class="form-group">
         <label for="exampleFormControlSelect2">Cuisine region</label>
-        <select multiple class="form-control" id="exampleFormControlSelect2">
+        <select multiple class="form-control" name="cuisine_region" id="cuisine_region">
       <option>Tuscany</option>
       <option>Sicily</option>
       <option>Roma</option>
@@ -36,10 +58,11 @@
     
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Preperation</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" name="cooking_instruction" id="cooking_instruction" rows="3"></textarea>
         </div>
       </form>
     </div>
+
 
 
 
@@ -47,26 +70,28 @@
 
       <div class="form-group">
         <label for="exampleFormControlSelect2">Allergens</label>
-        <select multiple class="form-control" id="exampleFormControlSelect2">
+        <select multiple class="form-control" name="allergens" id="allergens">
       <option>Nuts</option>
       <option>Eggs</option>
       <option>Milk</option>
       <option>Wheat</option>
     </select>
       </div>
+      
 
       <div class="form-group">
         <label for="exampleFormControlSelect2">Difficulty</label>
-        <select multiple class="form-control" id="exampleFormControlSelect2">
+        <select multiple class="form-control" name="difficulty" id="difficulty">
       <option>Easy</option>
       <option>Medium</option>
       <option>Expert</option>
     </select>
       </div>
+      
 
         <div class="form-group">
           <label for="exampleFormControlSelect1">Cooking time</label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select class="form-control" name="cooking_time" id="cooking_time">
  <option>15 - 20 min. </option>
       <option>20 - 45 min. </option>
       <option>45 - 120 min. </option>
@@ -74,12 +99,14 @@
         </div>
         
         
+        
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Ingredients</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" name="ingredients" id="ingredients" rows="3"></textarea>
         </div>
       </form>
     </div>
+    
 
       <label>Upload Image</label>
       <div class="input-group">
@@ -95,13 +122,15 @@
 
 
   </div>
-
+</form>
 </div>
 
 
 
-<input class="btn btn-primary" type="submit" value="&#43; Add recipe">
+<input class="btn btn-primary" type="submit" name="action" value="&#43; Add recipe">
+
 <input class="btn btn-secondary" type="reset" value="Reset">
+
 </div>
 </div>
 </div>

@@ -1,9 +1,15 @@
 import os
 import json
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, redirect, request, url_for
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 
 app = Flask (__name__)
 app.secret_key = 'some_secret'
+
+app.config["MONGO_DBNAME"] = 'myCookBook'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+mongo = PyMongo(app)
 
 @app.route('/') 
 def index():
@@ -42,10 +48,17 @@ def contact():
     return render_template("contact.html", page_title="Contact")
         
 
+@app.route('/')
+@app.route('/get_recipe')
+def get_recipe():
+    return render_template("detailpage.html", 
+recipe=mongo.db.tasks.find())
+
 
 @app.route('/recipes')
 def recipes():
-        return render_template("recipes.html", page_title="Recipes")  
+      
+        return render_template("recipes.html", page_title="Recipes") 
         
 @app.route('/detailpage')
 def detailpage():
@@ -58,12 +71,20 @@ def instruction():
 
 @app.route('/addrecipes')
 def addrecipes():
-        return render_template("addrecipes.html", page_title="Add recipes")            
+        return render_template("addrecipes.html", page_title="Add recipes")
+        
 
 @app.route('/recipesfollow')
 def recipesfollow():
         return render_template("recipesfollow.html", page_title="Second page")             
         
+
+        
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipe = mongo.db.recipe
+    recipe.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipe'))        
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

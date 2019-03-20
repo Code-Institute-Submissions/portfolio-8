@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for recipes in addrecipes %}
+        {{addrecipe.recipe_name}}
+        {{addrecipe.description}}
+        {{addrecipe.author_name}}
+        {{addrecipe.cuisine_region}}
+        {{addrecipe.difficulty}}
+        {{addrecipe.allergens}}
+        {{addrecipe.cooking_instruction}}
+        {{addrecipe.ingredients}}
+    {% endfor %}
+{% endblock %}
+
+
+
+
+Moet dit wellicht in 'add recipes'HTML???????????????????
+Injectie tussen backend (mongo db en python) en HTML 
+Goed checken bij de filmpjes
