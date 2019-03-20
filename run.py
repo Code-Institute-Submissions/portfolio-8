@@ -76,7 +76,7 @@ def addrecipes():
 
 @app.route('/recipesfollow')
 def recipesfollow():
-        return render_template("recipesfollow.html", page_title="Second page")             
+        return render_template("recipesfollow.html", page_title="Second recipe page")             
         
 
         
