@@ -1,15 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-{% for recipes in addrecipes %} {{addrecipe.recipe_name}} 
-{{addrecipe.description}}
-{{addrecipe.author_name}} 
-{{addrecipe.cuisine_region}} 
-{{addrecipe.difficulty}} 
-{{addrecipe.allergens}} 
-{{addrecipe.cooking_time}}
-{{addrecipe.cooking_instruction}}
-{{addrecipe.ingredients}} 
-{% endfor %}
+
 
 <h2> {{ page_title }} </h2>
 
@@ -21,19 +12,11 @@
 <h2>Preferences</h2>
 
 
-
 <div class="container">
  <div class="row">
   
-  
-  
   <div class="col-sm-4">
     
-  
-                 
-  
-  
-
 
    <div class="form-group">
     <label for="exampleFormControlSelect2">Dish type</label>
