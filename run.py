@@ -8,7 +8,7 @@ app = Flask (__name__)
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 
 app.config["MONGO_DBNAME"] = 'myCookBook'
-app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+app.config["MONGO_URI"] = 'mongodb+srv://root:tempr00t@mycookbook-04yji.mongodb.net/myCookBook?retryWrites=true'
 mongo = PyMongo(app)
 
 
@@ -40,20 +40,22 @@ def about_member(member_name):
     
 ### show recipe on detailpage.html  ###     
         
+
+@app.route('/')
 @app.route('/detailpage')
 def detailpage():
-
+    return render_template("detailpage.html", recipe=mongo.db.MyMDB.find())    
     
-    recipe = mongo.db.myMDB.find()
     
-    return render_template("detailpage.html", page_title="Detailpage", recipe=recipe)   
-    
-## show all recipes and filter categories on recipes.html page ###    
+### show all recipes and filter categories on recipes.html page ###    
 
 @app.route('/recipes')
 def recipes():
     
               return render_template("recipes.html", page_title="Recipes") 
+              
+              
+### show all recipes and filter categories on follow page ###                  
               
 @app.route('/recipesfollow')
 def recipesfollow():
@@ -89,4 +91,4 @@ if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
             debug=True)
-    
+

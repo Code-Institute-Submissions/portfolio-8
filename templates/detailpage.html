@@ -2,8 +2,6 @@
 
 
 
-
-
 <div clas="upvotes">
 <form>
   <i class="fa fa-thumbs-up" aria-hidden="true"></i> Likes
@@ -20,20 +18,23 @@
 </form>
 
 <form>
-    <i class="fa fa-user-circle" aria-hidden="true"></i> AUTHOR_NAME
+    <i class="fa fa-user-circle" aria-hidden="true"></i> 
     <input name="firstname" type="text">
      Author recipe.views 
 </form>
 
 
 </div>
+
+
+
         
 <!-- Page Content -->
 <div class="container">
 
   <!-- Portfolio Item Heading -->
-  <h1 class="my-4">DISH_TYPE
-    <small>COOKING_TIME</small>
+  <h1 class="my-4">{{dish_type}}
+    <small>{{cooking_instruction}}</small>
   </h1>
   
 
@@ -111,7 +112,7 @@
 </div>
 <!-- /.container -->
 
-
+     
 
     {% endblock %}
 
