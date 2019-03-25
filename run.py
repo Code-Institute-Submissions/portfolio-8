@@ -7,18 +7,22 @@ from bson.objectid import ObjectId
 app = Flask (__name__)
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 
-app.config["MONGO_DBNAME"] = 'myCookBook'
-app.config["MONGO_URI"] = 'mongodb+srv://root:tempr00t@mycookbook-04yji.mongodb.net/myCookBook?retryWrites=true'
+app.config["MONGO_DBNAME"] = 'recipe_book'
+app.config["MONGO_URI"] = 'mongodb+srv://root:pwvanr00t1@mycluster-yaqc7.mongodb.net/recipe_book?retryWrites=true'
+
 mongo = PyMongo(app)
 
 
-### routing index page ###
+### routing the index page ###
+
 
 @app.route('/') 
 def index():
     return render_template("index.html", page_title="Home" )  
+    
 
-### routing for the about page ###    
+### routing the about page ###    
+
 @app.route('/about')
 def about():
     data = [1]
@@ -35,27 +39,24 @@ def about_member(member_name):
         for obj in data:
             if obj["url"] == member_name:
                 member = obj
-    
         return render_template("member.html", member=member)
     
-### show recipe on detailpage.html  ###     
+### show recipe on detailpage (single recipe page)  ###     
         
-
 @app.route('/')
 @app.route('/detailpage')
 def detailpage():
-    return render_template("detailpage.html", recipe=mongo.db.MyMDB.find())    
+    return render_template("detailpage.html", recipe=mongo.db.recipes.find())    
     
     
-### show all recipes and filter categories on recipes.html page ###    
+### show all recipes and filter categories on recipes.html page  ###    
 
 @app.route('/recipes')
 def recipes():
     
-              return render_template("recipes.html", page_title="Recipes") 
+    return render_template("recipes.html", page_title="Recipes", recipe=mongo.db.recipes.find())
               
-              
-### show all recipes and filter categories on follow page ###                  
+### Follow page of recipes.html (show all recipes) ###                  
               
 @app.route('/recipesfollow')
 def recipesfollow():
@@ -70,7 +71,7 @@ def addrecipes():
         
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
-    recipe = mongo.db.myMDB
+    recipe = mongo.db.recipes
     recipe.insert_one(request.form.to_dict())
     return redirect(url_for('get_recipe'))    
             
@@ -83,8 +84,8 @@ def contact():
     if request.method == "POST":
         flash("Thanks, {}, I have recieved your message!".format(request.form["name"]))
     return render_template("contact.html", page_title="Contact")
-            
-        
+    
+  
 ### run location ### 
     
 if __name__ == '__main__':

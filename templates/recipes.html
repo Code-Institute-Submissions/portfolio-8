@@ -1,262 +1,240 @@
 {% extends 'base.html' %} {% block content %}
 
 
+{% for recipe in recipes %}
+<p>DEMO TEXT AND TEST {{recipe_name}} {{ recipe['recipe_name'] }} {{recipes.recipe_name}}</p>
+ {% endfor %}
+
 
 <h2> {{ page_title }} </h2>
 
 <p>
- The perfect combination of old favorites and brand new recipes! With a lot of never-before-seen Tasty dishes and treats, this blog is your base for delicious italian dishes. Recipes for minimalists, maximalists, and everyone in between. 
- Whether you're trying to learn the ins and outs of cooking or you want to create over-the-top dishes that are truly Instagram-worthy, it's covered. The only rule? It's gotta be Tasty!
+  The perfect combination of old favorites and brand new recipes! With a lot of never-before-seen Tasty dishes and treats, this blog is your base for delicious italian dishes. Recipes for minimalists, maximalists, and everyone in between. Whether you're
+  trying to learn the ins and outs of cooking or you want to create over-the-top dishes that are truly Instagram-worthy, it's covered. The only rule? It's gotta be Tasty!
 </p>
 
 <h2>Preferences</h2>
 
-
 <div class="container">
- <div class="row">
-  
-  <div class="col-sm-4">
-    
+  <div class="row">
+    <div class="col-sm-4">
 
-   <div class="form-group">
-    <label for="exampleFormControlSelect2">Dish type</label>
-    <select multiple class="form-control" name="dish_type" id="5c8fba58da02b59e8e4a1f20">
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Dish type</label>
+        <select multiple class="form-control" name="dish_type" id="5c8fba58da02b59e8e4a1f20">
       <option>Antipasti</option>
       <option>Risotto</option>
       <option>Pizza</option>
       <option>Pasta</option>
       <option>Rice</option>
-    </select>
-  </div>
-</div>
+      </select>
+      </div>
+    </div>
 
-  <div class="col-sm-4">
-    <label for="exampleFormControlSelect2">Author</label>
-    <select multiple class="form-control" name="dish_type" id="dish_type">
+    <div class="col-sm-4">
+      <label for="exampleFormControlSelect2">Author</label>
+      <select multiple class="form-control" name="dish_type" id="dish_type">
       <option>Anna</option>
       <option>Anthony</option>
       <option>Niels</option>
     </select>
+    </div>
   </div>
- </div>
 
- <div class="row">
+  <div class="row">
 
-<div class="col-sm-3">
- <div class="form-group">
-    <label for="exampleFormControlSelect2">Cuisine region</label>
-    <select multiple class="form-control" name="cuisine_region" id="cuisine_region">
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Cuisine region</label>
+        <select multiple class="form-control" name="cuisine_region" id="cuisine_region">
       <option>Tuscany</option>
       <option>Sicily</option>
       <option>Roma</option>
       <option>Abruzzo</option>
     </select>
-  </div>  
-  </div> 
-  
-  <div class="col-sm-3">
- <div class="form-group">
-    <label for="exampleFormControlSelect2">Allergens</label>
-    <select multiple class="form-control" name="allergens" id="allergens">
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Allergens</label>
+        <select multiple class="form-control" name="allergens" id="allergens">
       <option>Nuts</option>
       <option>Wheet</option>
       <option>Oatmilk</option>
     </select>
-  </div>  
- </div> 
- 
+      </div>
+    </div>
 
- 
- <div class="col-sm-3">
- <div class="form-group">
-    <label for="exampleFormControlSelect2">Difficulty</label>
-    <select multiple class="form-control" name="difficulty" id="difficulty">
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Difficulty</label>
+        <select multiple class="form-control" name="difficulty" id="difficulty">
       <option>Easy</option>
       <option>Medium</option>
       <option>Expert</option>
     </select>
-  </div>  
- </div> 
- 
- <div class="col-sm-3">
- <div class="form-group">
-    <label for="exampleFormControlSelect2">Cooking time</label>
-    <select multiple class="form-control" name="cooking_time" id="cooking_time">
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Cooking time</label>
+        <select multiple class="form-control" name="cooking_time" id="cooking_time">
       <option>15 - 20 min. </option>
       <option>20 - 45 min. </option>
       <option>45 - 120 min. </option>
     </select>
-  </div>  
- </div> 
-</div>
-
-
-     <a class="btn btn-primary-results" type="submit" name="action" href="/recipes" role="button"> Show results
-     </a>
-     
-
-     
-    <input class="btn btn-secondary" type="reset" value="Reset">
-
-<p>You can see the results of your filtered preferences below in the recipes list.</p>
-
-<div class="container-recipes">
- <h2>Add your recipes here</h2>
- <div class="dropdown">
-  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-   
-   
-
+      </div>
+    </div>
   </div>
-  
-   <span class="caret"></span></button>
-     <a class="btn btn-primary-add" href="/addrecipes" role="button">&#43; Add your recipe
+
+
+  <a class="btn btn-primary-results" type="submit" name="action" href="/recipes" role="button"> Show results
      </a>
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <input class="btn btn-secondary" type="reset" value="Reset">
+
+  <p>You can see the results of your filtered preferences below in the recipes list.</p>
+
+  <div class="container-recipes">
+    <h2>Add your recipes here</h2>
+    <div class="dropdown">
+      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+      </div>
+      
+      
+      <span class="caret"></span></button>
+      <a class="btn btn-primary-add" href="/addrecipes" role="button">&#43; Add your recipe
+     </a>
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Help
   </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="/contact">Contact me</a>
+      </div>
 
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="/contact">Contact me</a>
-  </div>
-
-  </form>
-  </div>
-  
-  
-  
-  
-  
-  
-  <!-- Page Content -->
-<div class="container">
-
-  <!-- Page Heading -->
+      </form>
+    </div>
 
 
-  <div class="row">
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="/detailpage">antipasti misto</a>
-          </h4>
-          <p class="card-text">delicious mix of olives, cheeses and different types of Italian ham.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="/detailpage">spaghetti alle vongole</a>
-          </h4>
-          <p class="card-text">spaghetti vongole is an Italian pasta dish with shellfish from the south of Italy.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="/detailpage">spaghetti scampi lemone</a>
-          </h4>
-          <p class="card-text">delicious and fresh pasta with shrimps. Taste the sea!</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="/detailpage">penne con carne</a>
-          </h4>
-          <p class="card-text">mildly spicy classic with minced meat, bell pepper and fresh bassilcum. You should taste it once.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="/detailpage">pizza Napolitana</a>
-          </h4>
-          <p class="card-text">tasty pizza for the anchovy lovers</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-sm-6 mb-4">
-      <div class="card h-100">
-        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="/detailpage">pizza ricota e spinaci</a>
-          </h4>
-          <p class="card-text">pizza with creamy Italian cheese and spinach</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /.row -->
 
-  <!-- Pagination -->
-  <ul class="pagination justify-content-center">
-    <li class="page-item">
-      <a class="page-link" href="/recipes" aria-label="Previous">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <a href="/detailpage"><img class="card-img-top" <img src="{{recipe_image}}"> alt="demo pizza"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">{{recipe_name}} </a>
+              </h4>
+              <p class="card-text">{{recipe_description}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">spaghetti alle vongole {{recipe_name}} </a>
+              </h4>
+              <p class="card-text">spaghetti vongole is an Italian pasta dish with shellfish from the south of Italy.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">spaghetti scampi lemone {{recipe_name}} </a>
+              </h4>
+              <p class="card-text">delicious and fresh pasta with shrimps. Taste the sea!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">penne con carne {{recipe_name}} </a>
+              </h4>
+              <p class="card-text">mildly spicy classic with minced meat, bell pepper and fresh bassilcum. You should taste it once.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">pizza Napolitana {{recipe_name}} </a>
+              </h4>
+              <p class="card-text">tasty pizza for the anchovy lovers</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="card h-100">
+            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">pizza ricota e spinaci {{recipe_name}}</a>
+              </h4>
+              <p class="card-text">pizza with creamy Italian cheese and spinach</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Pagination -->
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="/recipes" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
             <span class="sr-only">Previous</span>
           </a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="/recipes">1</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="/recipesfollow">2</a>
-    </li>
-   
-    <li class="page-item">
-      <a class="page-link" href="/recipes" aria-label="Next">
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="/recipes">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="/recipesfollow">2</a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link" href="/recipes" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
             <span class="sr-only">Next</span>
           </a>
-    </li>
-  </ul>
+        </li>
+      </ul>
 
-</div>
-<!-- /.container -->
-  
+    </div>
 
 
-   <script>
-    $(document).ready(function() {
-     $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $(".dropdown-menu li").filter(function() {
-       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    <script>
+      $(document).ready(function() {
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $(".dropdown-menu li").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
       });
-     });
-    });
-    
-    
-function filter(keyword) {
-    var select = document.getElementById("select");
-    for (var i = 0; i < select.length; i++) {
-        var txt = select.options[i].text;
-        var include = txt.toLowerCase().startsWith(keyword.toLowerCase());
-        select.options[i].style.display = include ? 'list-item':'none';
-    }
-}
-    
-    
-    
-    
-    
-   </script>
+
+      function filter(keyword) {
+        var select = document.getElementById("select");
+        for (var i = 0; i < select.length; i++) {
+          var txt = select.options[i].text;
+          var include = txt.toLowerCase().startsWith(keyword.toLowerCase());
+          select.options[i].style.display = include ? 'list-item' : 'none';
+        }
+      }
+    </script>
 
 
-   {% endblock %}
+  {% endblock %}

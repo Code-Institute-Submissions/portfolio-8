@@ -1,55 +1,51 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %} 
 
+
+{% for recipe in recipes %}
+
+<h3>Recipe name here {{recipes.recipe_name}}</h3>
+
+
+{% endfor %}
 
 
 <div clas="upvotes">
-<form>
-  <i class="fa fa-thumbs-up" aria-hidden="true"></i> Likes
-    <input name="firstname" type="text">
-     recipe.likes  Likes
-    
-</form>
+  <form>
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i> Likes
+    <input name="firstname" type="text"> 
+  </form>
 
-<form>
-   <i class="far fa-eye" aria-hidden="true"></i> Views
-    <input name="firstname" type="text">
-     recipe.views  Views
-    
-</form>
+  <form>
+    <i class="far fa-eye" aria-hidden="true"></i> Views
+    <input name="firstname" type="text"> 
 
-<form>
-    <i class="fa fa-user-circle" aria-hidden="true"></i> 
-    <input name="firstname" type="text">
-     Author recipe.views 
-</form>
+  </form>
+
+  <form>
+    <i class="fa fa-user-circle" aria-hidden="true"> </i> Author
+    <input name="firstname" type="text"> 
+  </form>
 
 
 </div>
 
 
 
-        
-<!-- Page Content -->
 <div class="container">
 
-  <!-- Portfolio Item Heading -->
   <h1 class="my-4">{{dish_type}}
     <small>{{cooking_instruction}}</small>
   </h1>
-  
 
-  <!-- Portfolio Item Row -->
   <div class="row">
-
     <div class="col-md-8">
-      <img class="img-fluid" src="http://placehold.it/750x500" alt="">
-      recipe.recipe_image 
+      <img class="img-fluid" src="http://placehold.it/750x500" alt=""> recipe.recipe_image
     </div>
 
     <div class="col-md-4">
       <h3 class="my-3">PREPERARTION</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-     
+      <p>{{recipe.preperation}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
+        placerat, felis enim.</p>
       <h3 class="my-3">INGREDIENTS</h3>
       <ul>
         <li>Lorem Ipsum</li>
@@ -58,63 +54,45 @@
         <li>Adipiscing Elit</li>
       </ul>
     </div>
-
   </div>
-  <!-- /.row -->
-  
 
-  
-  
-  <div class="row">
-    
-   
-    
- </div>
-    
-  </div>
-  
-  <input class="btn btn-edit" type="submit" name="action" value="&#43; Edit recipe">
-<input class="btn btn-delete" type="reset" value="Delete">
-  
-
-  <!-- Related Projects Row -->
-  <h3 class="my-4">You May Also Like</h3>
 
   <div class="row">
-
-    <div class="col-md-3 col-sm-6 mb-4">
-      <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-    </div>
-
-    <div class="col-md-3 col-sm-6 mb-4">
-      <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-    </div>
-
-    <div class="col-md-3 col-sm-6 mb-4">
-      <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-    </div>
-
-    <div class="col-md-3 col-sm-6 mb-4">
-      <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-          </a>
-    </div>
-
   </div>
-  <!-- /.row -->
+</div>
+<div class="mod-buttons">
+  <input class="btn btn-edit" type="submit" name="action" value="&#xf044; Edit recipe">
+  <input class="btn btn-delete" type="reset" value="&#xe92b; Delete">
+</div>
+
+<!-- Related Projects Row -->
+<h3 class="my-4">You May Also Like</h3>
+<div class="row">
+  <div class="col-md-3 col-sm-6 mb-4">
+    <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+  </div>
+  <div class="col-md-3 col-sm-6 mb-4">
+    <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+  </div>
+  <div class="col-md-3 col-sm-6 mb-4">
+    <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+  </div>
+  <div class="col-md-3 col-sm-6 mb-4">
+    <a href="#">
+            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          </a>
+  </div>
+</div>
+<!-- /.row -->
 
 </div>
-<!-- /.container -->
-
-     
-
-    {% endblock %}
 
 
 
+{% endblock %}

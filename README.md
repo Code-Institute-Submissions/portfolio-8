@@ -12,15 +12,6 @@ Niels de Klerk (March, 2019)
 
 ## UX perspective 
 
-User stories, as an important part of the UX design, are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, 
-usually a user or customer of the system. In a random order a list of important user stories has been drawn up bellow from the perspective of the specific user that we aim for: 
-
-*	"I want to see directly what kind of website I’m looking at"; 
-*	"I want to see what the main goal of the website is (defined by differtend indicators)"; 
-*	"I want to easely use the mechanics of the website and see what the result is of clicking trough the highlighted content or event handling buttons, etc."; 
-*	"I want the possibility to easely return to a previous state of the website (workflow of the website)";
-*	"I want to see marks, highlighted buttons or other indicators that can show the results of single or multiple actions that i undertake". 
-
 
 In the following link additional information concerning the UX/UI design can be found. 
 This includes wireframes and mockups and basic images for the branddesign: 
@@ -167,9 +158,7 @@ The Jasmine testpage, with automatic unit testresults, are available at: https:/
 During the development of this project Trello (Trello.com) is used as a simple project management tool to develop in a controlled project environment. I have used the 'trello-board' for all the 
 actions within the project; initializing the project until the completion. The trello-board has been used for: preperation actions, building functionalities, testwork and debugging. 
 
-Below a screenshot taken halfway of the realization.
 
-![Trello screenshot](https://raw.githubusercontent.com/nikl881/california-roadtrip/master/assets/css/images/trello.png) 
 
 ## Deployment
 
