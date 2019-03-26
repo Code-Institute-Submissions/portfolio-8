@@ -5,30 +5,43 @@
 <h2> {{ page_title }} </h2>
 
 
-
   <div class="row">
+    
+  
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+        {% for recipe in recipes %}
+        <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="/detailpage">risotto alla milanese</a>
+            <a href="/detailpage">{{recipe.recipe_name}}</a>
           </h4>
-          <p class="card-text">one of the most popular rice dishes from Italian cuisine</p>
+          <p class="card-text">{{recipe.description}}</p>
+          
         </div>
+        
       </div>
+      {% endfor %}
     </div>
+    
+
     <div class="col-lg-4 col-sm-6 mb-4">
       <div class="card h-100">
-        <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+        {% for recipe in recipes %}
+        <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="/detailpage">aglio e olio</a>
+            <a href="/detailpage">{{recipe.recipe_name}}</a>
           </h4>
-          <p class="card-text">favorite of chef Niels. Difficult because of the simplicity of the recipe, but absolutely delicious!</p>
+          <p class="card-text">{{recipe.description}}</p>
+          
         </div>
+        
       </div>
+      {% endfor %}
     </div>
+    
+    
   
       </div>
     </div>

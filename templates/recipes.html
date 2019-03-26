@@ -1,28 +1,6 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 
-
-
-{% for recipe in recipes %}
-
-<p>=========</p>
-
- {{recipe.recipe_name}}
- {{recipe.description}}
- {{recipe.dish_type}}
- {{recipe.author_name}}
- {{recipe.cuisine_region}}
- {{recipe.difficulty}}
- {{recipe.recipe_image}}
- {{recipe.cooking_time}}
- {{recipe.allergens}}
- 
-  {% endfor %}
-  
-  
-  {% for cat in categories %}
-  {{cat.recipe_name}}
-  {% endfor %}
-  
 
 
 <h2> {{ page_title }} </h2>
@@ -37,6 +15,7 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="form-group">
+        
         <label for="exampleFormControlSelect2">Dish type</label>
         <select multiple class="form-control" name="dish_type" id="5c8fba58da02b59e8e4a1f20">
       <option>Antipasti</option>
@@ -118,8 +97,6 @@
     <div class="dropdown">
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
       </div>
-      
-      
       <span class="caret"></span></button>
       <a class="btn btn-primary-add" href="/addrecipes" role="button">&#43; Add your recipe
      </a>
@@ -134,78 +111,107 @@
     </div>
 
 
+ 
+
 
     <div class="container">
       <div class="row">
-        
+
+  
         <div class="col-lg-4 col-sm-6 mb-4">
           <div class="card h-100">
-            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            
+            
+            {% for recipe in recipes %}
+            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+            
             <div class="card-body">
               <h4 class="card-title">
-                <a href="/detailpage">spaghetti alle vongole </a>
+                <a href="/detailpage">{{recipe.recipe_name}}   </a>
               </h4>
-              <p class="card-text">spaghetti vongole is an Italian pasta dish with shellfish from the south of Italy. </p>
+              <p class="card-text">  {{recipe.description}}  </p>
             </div>
+             {% endfor %}
+          </div>
+        </div>
+        
+        
+        {% for recipe in recipes %}
+            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+            
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">{{recipe.recipe_name}}   </a>
+              </h4>
+              <p class="card-text">  {{recipe.description}}  </p>
+            </div>
+             {% endfor %}
+          </div>
+        </div>
+        
+     
+        
+        {% for recipe in recipes %}
+            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+            
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">{{recipe.recipe_name}}   </a>
+              </h4>
+              <p class="card-text">  {{recipe.description}}  </p>
+            </div>
+             {% endfor %}
+          </div>
+        </div>
+        
+     
+        {% for recipe in recipes %}
+            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+            
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">{{recipe.recipe_name}}   </a>
+              </h4>
+              <p class="card-text">  {{recipe.description}}  </p>
+            </div>
+             {% endfor %}
+          </div>
+        </div>
+        
+        </div>
+        
+        <div class="col-sm-6"></div>
+        
+    
+        {% for recipe in recipes %}
+            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+            
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">{{recipe.recipe_name}}   </a>
+              </h4>
+              <p class="card-text">  {{recipe.description}}  </p>
+            </div>
+             {% endfor %}
+          </div>
+        </div>
+        
+        
+        
+        {% for recipe in recipes %}
+            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+            
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">{{recipe.recipe_name}}   </a>
+              </h4>
+              <p class="card-text">  {{recipe.description}}  </p>
+            </div>
+             {% endfor %}
           </div>
         </div>
 
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="card h-100">
-            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/detailpage">spaghetti alle vongole </a>
-              </h4>
-              <p class="card-text">spaghetti vongole is an Italian pasta dish with shellfish from the south of Italy. </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/detailpage">spaghetti scampi lemone  </a>
-              </h4>
-              <p class="card-text">delicious and fresh pasta with shrimps. Taste the sea!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="card h-100">
-            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/detailpage">penne con carne  </a>
-              </h4>
-              <p class="card-text">mildly spicy classic with minced meat, bell pepper and fresh bassilcum. You should taste it once. </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="card h-100">
-            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/detailpage">pizza Napolitana</a>
-              </h4>
-              <p class="card-text">tasty pizza for the anchovy lovers</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="card h-100">
-            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/detailpage">pizza ricota e spinaci </a>
-              </h4>
-              <p class="card-text">pizza with creamy Italian cheese and spinach</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        
 
 
       <!-- Pagination -->

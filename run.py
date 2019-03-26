@@ -19,9 +19,9 @@ mongo = PyMongo(app)
 @app.route('/') 
 def index():
     
-    return render_template("index.html", page_title="Home" )  
+    return render_template("index.html", page_title="Home", recipes=mongo.db.recipes.find())
     
-
+    
 ### routing the about page ###    
 
 @app.route('/about')
@@ -43,23 +43,19 @@ def about_member(member_name):
         return render_template("member.html", member=member)
   
   
-  
-  
-  
-  
-  
- 
+
 ### show recipe on detailpage (single recipe page)  ###     
         
 @app.route('/')
 @app.route('/detailpage')
 def detailpage():
-    return render_template("detailpage.html", recipe=mongo.db.recipes.find())    
+    return render_template("detailpage.html")   
     
 @app.route('/')
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("detailpage.html", recipe=mongo.db.recipes.find())    
+    return render_template("detailpage.html", recipes=mongo.db.recipes.find())
+    
     
     
 ### show all recipes and filter categories on recipes.html page  ###   
@@ -67,13 +63,7 @@ def get_recipes():
 
 @app.route('/recipes')
 def recipes():
-    
-    return render_template("recipes.html", page_title="Recipes", recipes=mongo.db.recipes.find(), categories=mongo.db.categories.find())
-    
-@app.route('/')
-@app.route('/get_categories')
-def get_categories():
-    return render_template("recipes.html", categories=mongo.db.categories.find())    
+        return render_template("recipes.html", page_title="Recipes", recipes=mongo.db.recipes.find())
     
               
 ### Follow page (show all recipes) ###                  
@@ -82,13 +72,6 @@ def get_categories():
 def recipesfollow():
         return render_template("recipesfollow.html", page_title="Second recipe page")               
               
-
-
-
-
-
-
-
 
 
 

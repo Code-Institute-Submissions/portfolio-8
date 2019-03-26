@@ -15,13 +15,8 @@
   <link rel="stylesheet" href="/files/css/css_lqeTDt-VUieQz-FhWN1wpUivZFb9fPknvIgfeBku4Ps.css?pnmie6" media="print" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" media="all" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
   <title>{{ page_title }}</title>
-  
-  
-
 </head>
 
 <body>
@@ -60,7 +55,6 @@
     </div>
   </nav>
 
-
   <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/main-slider.png') }}')">
     <div class="overlay"></div>
     <div class="container">
@@ -77,11 +71,27 @@
 
 
   <div class="container">
-    {% block content %} {% endblock %}
+    {% block content %}
+    
+    {% for recipe in recipes %}
+    <p>=========</p>
+  
+   {{recipe.recipe_name}}
+   {{recipe.description}}
+   {{recipe.dish_type}}
+   {{recipe.author_name}}
+   {{recipe.cuisine_region}}
+   {{recipe.difficulty}}
+   {{recipe.recipe_image}}
+   {{recipe.cooking_time}}
+   {{recipe.allergens}}
+    {% endfor %}
+    
+    
+    {% endblock %}
 
   </div>
   <hr>
-
   <footer>
     <div class="container">
       <div class="row">
@@ -90,14 +100,11 @@
             <li class="list-inline-item">
               <a href="#">
                
-     
               </a>
             </li>
-
             </a>
             </li>
           </ul>
-
         </div>
       </div>
     </div>
@@ -112,7 +119,5 @@
   <!-- Custom scripts for this template -->
   <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
 
-
 </body>
-
 </html>

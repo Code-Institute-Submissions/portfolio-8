@@ -331,9 +331,7 @@ h2 a {
     margin-top: 18px;
 }
 
-.btn:not(:disabled):not(.disabled){
-    background-color: orange;
-}
+
 
 .mod-buttons{
     margin-top: 250px;
@@ -341,4 +339,13 @@ h2 a {
 
 my-4{
     margin-top:50px;
+}
+
+btn btn-edit1{
+    background-color: red;
+    
+}
+
+btn btn-delete2{
+    background-color:red;
 }
