@@ -118,7 +118,7 @@
       <div class="row">
 
   
-        <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="col-md-6">
           <div class="card h-100">
             
             
@@ -133,9 +133,9 @@
             </div>
              {% endfor %}
           </div>
-        </div>
+       
         
-        
+        <div class="col-md-6">
         {% for recipe in recipes %}
             <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
             
@@ -147,10 +147,25 @@
             </div>
              {% endfor %}
           </div>
-        </div>
+      
         
      
+        <div class="col-md-6">
+        {% for recipe in recipes %}
+            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+            
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">{{recipe.recipe_name}}   </a>
+              </h4>
+              <p class="card-text">  {{recipe.description}}  </p>
+            </div>
+             {% endfor %}
+          </div>
+    
         
+        
+     <div class="col-md-6">
         {% for recipe in recipes %}
             <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
             
@@ -164,25 +179,10 @@
           </div>
         </div>
         
-     
-        {% for recipe in recipes %}
-            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
-            
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/detailpage">{{recipe.recipe_name}}   </a>
-              </h4>
-              <p class="card-text">  {{recipe.description}}  </p>
-            </div>
-             {% endfor %}
-          </div>
-        </div>
-        
-        </div>
+      
         
         <div class="col-sm-6"></div>
         
-    
         {% for recipe in recipes %}
             <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
             
@@ -194,9 +194,9 @@
             </div>
              {% endfor %}
           </div>
-        </div>
+   
         
-        
+        <div class="col-sm-6"></div>
         
         {% for recipe in recipes %}
             <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
@@ -209,7 +209,7 @@
             </div>
              {% endfor %}
           </div>
-        </div>
+        
 
         
 

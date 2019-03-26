@@ -1,72 +1,66 @@
 {% extends 'base.html' %} 
 {% block content %} 
 
-
+<h2> {{ page_title }} </h2>
 
 {% for recipe in recipes %}
 
-<p>SHOW THIS</p>
-
-  {{recipe.recipe_name}} 
-   {{recipe.description}}
-   {{recipe.dish_type}}
-   {{recipe.author_name}}
-   {{recipe.cuisine_region}}
-   {{recipe.difficulty}}
-   {{recipe.recipe_image}}
-   {{recipe.preperation}}
 
 
- {% endfor %}
-  
 
+
+<h2>{{recipe.recipe_name}} </h2>
+<h3>{{recipe.description}}</h3>
+<p>Cuisine Region: {{recipe.cuisine_region}}</p>
 
 <div clas="upvotes">
   <form>
-    <i class="fa fa-thumbs-up" aria-hidden="true"></i> Likes
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i> Likes:
     <input name="firstname" type="text"> 
   </form>
 
   <form>
-    <i class="far fa-eye" aria-hidden="true"></i> Views
+    <i class="far fa-eye" aria-hidden="true"></i> Views:
     <input name="firstname" type="text"> 
 
   </form>
 
   <form>
-    <i class="fa fa-user-circle" aria-hidden="true"> </i> Author
+    <i class="fa fa-user-circle" aria-hidden="true"> </i> Author: {{recipe.author_name}}
     <input name="firstname" type="text"> 
   </form>
 </div>
 
 
+
 <div class="container">
+  
+  
 
   <h1 class="my-4">
     <small></small>
   </h1>
   <div class="row">
     <div class="col-md-8">
-      <img class="img-fluid" src="http://placehold.it/750x500" alt=""> recipe.recipe_image
+      <img class="img-fluid" src="{{recipe.recipe_image}}" alt=""> 
     </div>
     <div class="col-md-4">
-      <h3 class="my-3">PREPERARTION</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
-        placerat, felis enim.</p>
-      <h3 class="my-3">INGREDIENTS</h3>
-      <ul>
-        <li>Lorem Ipsum</li>
-        <li>Dolor Sit Amet</li>
-        <li>Consectetur</li>
-        <li>Adipiscing Elit</li>
+      <h3 class="my-3">Preperation</h3>
+      <p>{{recipe.cooking_instruction}}</p>
+      <h3 class="my-3">Ingredients</h3>
+      <p>{{recipe.ingredients}}</p>
       </ul>
     </div>
   </div>
+
+ {% endfor %}
+
 
 
   <div class="row">
   </div>
 </div>
+
 <div class="mod-buttons">
   <input class="btn btn-edit1" type="submit" name="action" value="&#xf044; Edit recipe">
   <input class="btn btn-delete2" type="reset" value="&#xe92b; Delete">
@@ -77,22 +71,22 @@
 <div class="row">
   <div class="col-md-3 col-sm-6 mb-4">
     <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+            <img class="img-fluid" src="static/img/dish-img2.jpg" alt="">
           </a>
   </div>
   <div class="col-md-3 col-sm-6 mb-4">
     <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+            <img class="img-fluid" src="static/img/dish-img3.jpg" alt="">
           </a>
   </div>
   <div class="col-md-3 col-sm-6 mb-4">
     <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+            <img class="img-fluid" src="static/img/dish-img4.jpg" alt="">
           </a>
   </div>
   <div class="col-md-3 col-sm-6 mb-4">
     <a href="#">
-            <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+            <img class="img-fluid" src="static/img/dish-img5.jpg" alt="">
           </a>
   </div>
 </div>

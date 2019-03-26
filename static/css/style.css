@@ -168,9 +168,7 @@ col-sm-3 a{
     margin-top: 15px;
 }
 
-.recipes-container{
-    height: 300px;
-}
+
 
 .textual-inner {
     width: 100%;
@@ -335,6 +333,7 @@ h2 a {
 
 .mod-buttons{
     margin-top: 250px;
+    background-color: red;
 }
 
 my-4{
@@ -349,3 +348,4 @@ btn btn-edit1{
 btn btn-delete2{
     background-color:red;
 }
+

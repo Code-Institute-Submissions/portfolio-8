@@ -49,7 +49,7 @@ def about_member(member_name):
 @app.route('/')
 @app.route('/detailpage')
 def detailpage():
-    return render_template("detailpage.html")   
+    return render_template("detailpage.html", recipes=mongo.db.recipes.find())   
     
 @app.route('/')
 @app.route('/get_recipes')
