@@ -1,10 +1,8 @@
 {% extends 'base.html' %} {% block content %} 
 
-<!-- variation I used, from database collection: recipe_book.recipes -->
 
 {% for recipe in recipes %}
 
-<p>DEMO TEXT AND TEST {{recipe_name}} {{ recipe['recipe_name'] }} {{recipes.recipe_name}} {{recipe.recipe_name}} {{recipes_name}} </p>
 
  {{recipes.recipe_name}}
  {{recipes.description}}
@@ -18,7 +16,7 @@
 
  {% endfor %}
  
-<!-- end of comment-->
+
 
 
 <div clas="upvotes">

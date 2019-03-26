@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<!-- variation I used, from database collection: recipe_book.categories -->
+
 
 {% for recipe in recipes %}
 
@@ -16,16 +16,13 @@
  {{recipe.cooking_time}}
  {{recipe.allergens}}
  
- 
- 
   {% endfor %}
   
-  {% for cat in categories %}
-   {{cat.recipe_name}}
-   {% endfor %}
   
-   
-<!-- end of comment-->
+  {% for cat in categories %}
+  {{cat.recipe_name}}
+  {% endfor %}
+  
 
 
 <h2> {{ page_title }} </h2>

@@ -18,6 +18,7 @@ mongo = PyMongo(app)
 
 @app.route('/') 
 def index():
+    
     return render_template("index.html", page_title="Home" )  
     
 
@@ -42,11 +43,12 @@ def about_member(member_name):
         return render_template("member.html", member=member)
   
   
-        
-        
-# issue code below  #       
-        
-    
+  
+  
+  
+  
+  
+ 
 ### show recipe on detailpage (single recipe page)  ###     
         
 @app.route('/')
@@ -82,7 +84,9 @@ def recipesfollow():
               
 
 
-# end issue code # 
+
+
+
 
 
 

@@ -2,8 +2,12 @@
 {% extends 'base.html' %}
 {% block content %} 
 
+{% for recipe in recipes %}
 
+{{recipe.recipe_name}}
+{{recipe.recipe_description}}
 
+{% endfor %}
 
        <div class="row">
  
@@ -11,10 +15,10 @@
         <div class="post-preview">
           <a href="/detailpage">
             <h2 class="post-title">
-              antipasti misto
+              
             </h2>
             <h3 class="post-subtitle">
-              delicious mix of olives, cheeses and different types of Italian ham.
+              
             </h3>
           </a>
           <p class="post-meta">Dish cooked by
@@ -25,10 +29,10 @@
         <div class="post-preview">
           <a href="/detailpage">
             <h2 class="post-title">
-              spaghetti alle vongole
+             
             </h2>
             <h3 class="post-subtitle">
-              spaghetti vongole is an Italian pasta dish with shellfish from the south of Italy.
+              
             </h3>
           </a>
           <p class="post-meta">Dish cooked by
@@ -39,10 +43,11 @@
         <div class="post-preview">
           <a href="/detailpage">
             <h2 class="post-title">
-              spaghetti scampi lemone
+              
             </h2>
             <h3 class="post-subtitle">
-              delicious and fresh pasta with shrimps. Taste the sea!
+              
+
             </h3>
           </a>
           <p class="post-meta">Dish cooked by
@@ -53,10 +58,10 @@
         <div class="post-preview">
           <a href="/detailpage">
             <h2 class="post-title">
-            penne con carne
+          
             </h2>
             <h3 class="post-subtitle">
-              mildly spicy classic with minced meat, bell pepper and fresh bassilcum. You should taste it once. 
+             
             </h3>
           </a>
           <p class="post-meta">Dish cooked by
@@ -71,5 +76,7 @@
         </div>
       </div>
     </div>
+    
+    
     
 {% endblock %} 
