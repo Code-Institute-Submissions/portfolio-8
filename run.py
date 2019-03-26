@@ -40,6 +40,12 @@ def about_member(member_name):
             if obj["url"] == member_name:
                 member = obj
         return render_template("member.html", member=member)
+  
+  
+        
+        
+# issue code below  #       
+        
     
 ### show recipe on detailpage (single recipe page)  ###     
         
@@ -48,20 +54,39 @@ def about_member(member_name):
 def detailpage():
     return render_template("detailpage.html", recipe=mongo.db.recipes.find())    
     
+@app.route('/')
+@app.route('/get_recipes')
+def get_recipes():
+    return render_template("detailpage.html", recipe=mongo.db.recipes.find())    
     
-### show all recipes and filter categories on recipes.html page  ###    
+    
+### show all recipes and filter categories on recipes.html page  ###   
+
 
 @app.route('/recipes')
 def recipes():
     
-    return render_template("recipes.html", page_title="Recipes", recipe=mongo.db.recipes.find())
+    return render_template("recipes.html", page_title="Recipes", recipes=mongo.db.recipes.find(), categories=mongo.db.categories.find())
+    
+@app.route('/')
+@app.route('/get_categories')
+def get_categories():
+    return render_template("recipes.html", categories=mongo.db.categories.find())    
+    
               
-### Follow page of recipes.html (show all recipes) ###                  
+### Follow page (show all recipes) ###                  
               
 @app.route('/recipesfollow')
 def recipesfollow():
         return render_template("recipesfollow.html", page_title="Second recipe page")               
               
+
+
+# end issue code # 
+
+
+
+
 
 ## add a new recipe on addrecipes.html ###
 
@@ -73,7 +98,7 @@ def addrecipes():
 def insert_recipe():
     recipe = mongo.db.recipes
     recipe.insert_one(request.form.to_dict())
-    return redirect(url_for('get_recipe'))    
+    return redirect(url_for('recipes'))    
             
         
 ### routing for the contact page ###         

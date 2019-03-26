@@ -1,12 +1,24 @@
 {% extends 'base.html' %} {% block content %} 
 
+<!-- variation I used, from database collection: recipe_book.recipes -->
 
 {% for recipe in recipes %}
 
-<h3>Recipe name here {{recipes.recipe_name}}</h3>
+<p>DEMO TEXT AND TEST {{recipe_name}} {{ recipe['recipe_name'] }} {{recipes.recipe_name}} {{recipe.recipe_name}} {{recipes_name}} </p>
+
+ {{recipes.recipe_name}}
+ {{recipes.description}}
+ {{recipes.dish_type}}
+ {{recipes.author_name}}
+ {{recipes.cuisine_region}}
+ {{recipes.difficulty}}
+ {{recipes.recipe_image}}
+ {{recipes.preperation}}
 
 
-{% endfor %}
+ {% endfor %}
+ 
+<!-- end of comment-->
 
 
 <div clas="upvotes">
@@ -25,23 +37,18 @@
     <i class="fa fa-user-circle" aria-hidden="true"> </i> Author
     <input name="firstname" type="text"> 
   </form>
-
-
 </div>
 
 
 
 <div class="container">
-
   <h1 class="my-4">{{dish_type}}
     <small>{{cooking_instruction}}</small>
   </h1>
-
   <div class="row">
     <div class="col-md-8">
       <img class="img-fluid" src="http://placehold.it/750x500" alt=""> recipe.recipe_image
     </div>
-
     <div class="col-md-4">
       <h3 class="my-3">PREPERARTION</h3>
       <p>{{recipe.preperation}}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
@@ -89,7 +96,7 @@
           </a>
   </div>
 </div>
-<!-- /.row -->
+
 
 </div>
 

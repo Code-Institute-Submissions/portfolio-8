@@ -1,13 +1,34 @@
 {% extends 'base.html' %} {% block content %}
 
+<!-- variation I used, from database collection: recipe_book.categories -->
 
 {% for recipe in recipes %}
-<p>DEMO TEXT AND TEST {{recipe_name}} {{ recipe['recipe_name'] }} {{recipes.recipe_name}}</p>
- {% endfor %}
+
+<p>=========</p>
+
+ {{recipe.recipe_name}}
+ {{recipe.description}}
+ {{recipe.dish_type}}
+ {{recipe.author_name}}
+ {{recipe.cuisine_region}}
+ {{recipe.difficulty}}
+ {{recipe.recipe_image}}
+ {{recipe.cooking_time}}
+ {{recipe.allergens}}
+ 
+ 
+ 
+  {% endfor %}
+  
+  {% for cat in categories %}
+   {{cat.recipe_name}}
+   {% endfor %}
+  
+   
+<!-- end of comment-->
 
 
 <h2> {{ page_title }} </h2>
-
 <p>
   The perfect combination of old favorites and brand new recipes! With a lot of never-before-seen Tasty dishes and treats, this blog is your base for delicious italian dishes. Recipes for minimalists, maximalists, and everyone in between. Whether you're
   trying to learn the ins and outs of cooking or you want to create over-the-top dishes that are truly Instagram-worthy, it's covered. The only rule? It's gotta be Tasty!
@@ -18,7 +39,6 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-
       <div class="form-group">
         <label for="exampleFormControlSelect2">Dish type</label>
         <select multiple class="form-control" name="dish_type" id="5c8fba58da02b59e8e4a1f20">
@@ -120,14 +140,15 @@
 
     <div class="container">
       <div class="row">
+        
         <div class="col-lg-4 col-sm-6 mb-4">
           <div class="card h-100">
-            <a href="/detailpage"><img class="card-img-top" <img src="{{recipe_image}}"> alt="demo pizza"></a>
+            <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="/detailpage">{{recipe_name}} </a>
+                <a href="/detailpage">spaghetti alle vongole </a>
               </h4>
-              <p class="card-text">{{recipe_description}}</p>
+              <p class="card-text">spaghetti vongole is an Italian pasta dish with shellfish from the south of Italy. </p>
             </div>
           </div>
         </div>
@@ -137,9 +158,9 @@
             <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="/detailpage">spaghetti alle vongole {{recipe_name}} </a>
+                <a href="/detailpage">spaghetti alle vongole </a>
               </h4>
-              <p class="card-text">spaghetti vongole is an Italian pasta dish with shellfish from the south of Italy.</p>
+              <p class="card-text">spaghetti vongole is an Italian pasta dish with shellfish from the south of Italy. </p>
             </div>
           </div>
         </div>
@@ -148,7 +169,7 @@
             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="/detailpage">spaghetti scampi lemone {{recipe_name}} </a>
+                <a href="/detailpage">spaghetti scampi lemone  </a>
               </h4>
               <p class="card-text">delicious and fresh pasta with shrimps. Taste the sea!</p>
             </div>
@@ -159,9 +180,9 @@
             <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="/detailpage">penne con carne {{recipe_name}} </a>
+                <a href="/detailpage">penne con carne  </a>
               </h4>
-              <p class="card-text">mildly spicy classic with minced meat, bell pepper and fresh bassilcum. You should taste it once.</p>
+              <p class="card-text">mildly spicy classic with minced meat, bell pepper and fresh bassilcum. You should taste it once. </p>
             </div>
           </div>
         </div>
@@ -170,7 +191,7 @@
             <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="/detailpage">pizza Napolitana {{recipe_name}} </a>
+                <a href="/detailpage">pizza Napolitana</a>
               </h4>
               <p class="card-text">tasty pizza for the anchovy lovers</p>
             </div>
@@ -181,7 +202,7 @@
             <a href="/detailpage"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="/detailpage">pizza ricota e spinaci {{recipe_name}}</a>
+                <a href="/detailpage">pizza ricota e spinaci </a>
               </h4>
               <p class="card-text">pizza with creamy Italian cheese and spinach</p>
             </div>
