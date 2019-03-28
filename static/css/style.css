@@ -301,9 +301,6 @@ h2 a {
     margin-top: 100px; 
 }
 
-.form-control{
-    width: 280px;
-}
 
 .form-control1{
     width: 400px;
@@ -347,5 +344,10 @@ btn btn-edit1{
 
 btn btn-delete2{
     background-color:red;
+}
+
+btn btn-primary{
+  
+    margin-top: 50px; 
 }
 

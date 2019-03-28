@@ -9,6 +9,10 @@
   trying to learn the ins and outs of cooking or you want to create over-the-top dishes that are truly Instagram-worthy, it's covered. The only rule? It's gotta be Tasty!
 </p>
 
+
+
+
+
 <h2>Preferences</h2>
 
 <div class="container">
@@ -111,15 +115,16 @@
     </div>
 
 
- 
+ <div class="col s3">
+   
+ </div>
 
 
     <div class="container">
       <div class="row">
-
-  
+        
         <div class="col-md-6">
-          <div class="card h-100">
+       
             
             
             {% for recipe in recipes %}
@@ -131,11 +136,12 @@
               </h4>
               <p class="card-text">  {{recipe.description}}  </p>
             </div>
+           
              {% endfor %}
           </div>
        
         
-        <div class="col-md-6">
+        
         {% for recipe in recipes %}
             <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
             
@@ -148,24 +154,27 @@
              {% endfor %}
           </div>
       
-        
-     
-        <div class="col-md-6">
-        {% for recipe in recipes %}
-            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
-            
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="/detailpage">{{recipe.recipe_name}}   </a>
-              </h4>
-              <p class="card-text">  {{recipe.description}}  </p>
-            </div>
-             {% endfor %}
-          </div>
     
         
+        {% for recipe in recipes %}
+            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+            
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="/detailpage">{{recipe.recipe_name}}   </a>
+              </h4>
+              <p class="card-text">  {{recipe.description}}  </p>
+            </div>
+             {% endfor %}
+             
+             
+              <div class="col-md-6">
+             
+          </div>
+    
+       
         
-     <div class="col-md-6">
+     
         {% for recipe in recipes %}
             <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
             
@@ -177,11 +186,9 @@
             </div>
              {% endfor %}
           </div>
-        </div>
-        
+  
+
       
-        
-        <div class="col-sm-6"></div>
         
         {% for recipe in recipes %}
             <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
@@ -196,7 +203,7 @@
           </div>
    
         
-        <div class="col-sm-6"></div>
+
         
         {% for recipe in recipes %}
             <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
@@ -211,33 +218,11 @@
           </div>
         
 
+        </div>
         
 
 
-      <!-- Pagination -->
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="/recipes" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="/recipes">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="/recipesfollow">2</a>
-        </li>
-
-        <li class="page-item">
-          <a class="page-link" href="/recipes" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
-
-    </div>
+  
 
 
     <script>

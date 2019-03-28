@@ -75,7 +75,7 @@ def recipesfollow():
 
 
 
-## add a new recipe on addrecipes.html ###
+### add a new recipe on addrecipes.html ###
 
 @app.route('/addrecipes')
 def addrecipes():
@@ -87,10 +87,38 @@ def insert_recipe():
     recipe.insert_one(request.form.to_dict())
     return redirect(url_for('recipes'))    
             
+
+###  edit recipe ###
+
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_recipes =  mongo.db.recipes.find()
+    return render_template('editrecipe.html', recipe=the_recipe,
+    recipes=all_recipes)
+ 
+### update recipe ###
+
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipes.update( {'_id': ObjectId(recipe_id)},
+    {
+        'recipe_name':request.form.get('recipe_name'),
+        'recipe_description':request.form.get('recipe_description'),
+        'author_name': request.form.get('author_name'),
+        'cuisine_region': request.form.get('cuisine_region'),
+        'difficulty':request.form.get('difficulty'),
+        'allergens':request.form.get('allergens'),
+        'ingredients':request.form.get('ingredients'),
+        'cooking_time':request.form.get('cooking_time'),
+        'dish_type':request.form.get('dish_type'),
+        
+    })
+    return redirect(url_for('recipes'))
+ 
         
 ### routing for the contact page ###         
-        
-    
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
     if request.method == "POST":

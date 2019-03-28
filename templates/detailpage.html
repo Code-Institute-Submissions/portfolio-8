@@ -34,7 +34,7 @@
 
 
 <div class="container">
-  
+
   
 
   <h1 class="my-4">
@@ -51,6 +51,14 @@
       <p>{{recipe.ingredients}}</p>
       </ul>
     </div>
+    <div>
+      
+      <br>
+      <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">EDIT</a>
+      <a href="www.google.nl" class="btn btn-primary">DELETE</a>
+      
+    
+     </div>
   </div>
 
  {% endfor %}
@@ -61,10 +69,7 @@
   </div>
 </div>
 
-<div class="mod-buttons">
-  <input class="btn btn-edit1" type="submit" name="action" value="&#xf044; Edit recipe">
-  <input class="btn btn-delete2" type="reset" value="&#xe92b; Delete">
-</div>
+
 
 <!-- Related Projects Row -->
 <h3 class="my-4">You May Also Like</h3>
