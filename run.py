@@ -104,7 +104,7 @@ def update_recipe(recipe_id):
     recipes = mongo.db.recipes
     recipes.update( {'_id': ObjectId(recipe_id)},
     {
-        'recipe_name':request.form.get('recipe_name'),
+       'recipe_name':request.form.get('recipe_name'),
         'recipe_description':request.form.get('recipe_description'),
         'author_name': request.form.get('author_name'),
         'cuisine_region': request.form.get('cuisine_region'),
@@ -113,11 +113,12 @@ def update_recipe(recipe_id):
         'ingredients':request.form.get('ingredients'),
         'cooking_time':request.form.get('cooking_time'),
         'dish_type':request.form.get('dish_type'),
-        
+      
     })
-    return redirect(url_for('recipes'))
- 
-        
+    return redirect(url_for('get_recipes'))
+
+
+  
 ### routing for the contact page ###         
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
