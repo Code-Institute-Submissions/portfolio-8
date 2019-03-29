@@ -105,7 +105,7 @@ def update_recipe(recipe_id):
     recipes.update( {'_id': ObjectId(recipe_id)},
     {
        'recipe_name':request.form.get('recipe_name'),
-        'recipe_description':request.form.get('recipe_description'),
+        'description':request.form.get('description'),
         'author_name': request.form.get('author_name'),
         'cuisine_region': request.form.get('cuisine_region'),
         'difficulty':request.form.get('difficulty'),
@@ -113,10 +113,21 @@ def update_recipe(recipe_id):
         'ingredients':request.form.get('ingredients'),
         'cooking_time':request.form.get('cooking_time'),
         'dish_type':request.form.get('dish_type'),
+        'recipe_image': request.form.get('recipe_image'),
+        'cooking_instruction' : request.form.get ('cooking_instruction'),
+        
       
     })
+    
     return redirect(url_for('get_recipes'))
+  
 
+### delete a recipe ### 
+
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('get_recipes'))
 
   
 ### routing for the contact page ###         
