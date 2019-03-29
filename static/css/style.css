@@ -231,9 +231,13 @@ h5{
 }
 
 .recipeboxdetail{
-    margin-bottom: 200px; 
+
+    margin-bottom: 250px; 
 }
 
+h3{
+    color: #B8860B;
+}
 
 .button2, input{
     background-color: white;
@@ -257,6 +261,13 @@ h2 a {
     font-weight: bolder; 
 }
 
+.form-group{
+    color:#B8860B;
+}
+
+.label{
+    color:#B8860B;
+}
 
 .h1{
     margin-top: 20px;
