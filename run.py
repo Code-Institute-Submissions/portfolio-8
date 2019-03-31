@@ -3,6 +3,7 @@ import json
 from flask import Flask, render_template, request, flash, redirect, request, url_for, jsonify, json
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from pprint import pprint
 
 app = Flask (__name__)
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
@@ -19,9 +20,9 @@ mongo = PyMongo(app)
 @app.route('/') 
 def index():
     
-    return render_template("index.html", page_title="Home", recipes=mongo.db.recipes.find())
+    return render_template("index.html", page_title="Home",  recipes = mongo.db.recipes.find().sort('_id'))
     
-    
+
 ### routing the about page ###    
 
 @app.route('/about')
@@ -47,16 +48,18 @@ def about_member(member_name):
 ### show recipe on detailpage (single recipe page)  ###     
         
 @app.route('/')
-@app.route('/detailpage')
-def detailpage():
+@app.route('/detailpage/<recipe_id>  ')
+def detailpage(recipe_id):
+    mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template("detailpage.html", recipes=mongo.db.recipes.find())   
     
 @app.route('/')
-@app.route('/get_recipes')
+@app.route('/get_recipes/<recipe_id>')
 def get_recipes():
+    
     return render_template("detailpage.html", recipes=mongo.db.recipes.find())
-    
-    
+        
+
     
 ### show all recipes and filter categories on recipes.html page  ###   
 
@@ -128,8 +131,8 @@ def update_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
+    
 
-  
 ### routing for the contact page ###         
 @app.route('/contact', methods=["GET", "POST"])
 def contact():

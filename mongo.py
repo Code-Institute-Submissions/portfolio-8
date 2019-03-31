@@ -1,5 +1,9 @@
 import pymongo
-import os
+
+import os, requests
+from pprint import pprint
+import json
+import bson
 
 MONGODB_URI = os.getenv("MONGO_URI")
 DBS_NAME = "recipe_book"
@@ -134,6 +138,8 @@ def main_loop():
         print("")
 
 
+
+ 
 conn = mongo_connect(MONGODB_URI)
 coll = conn[DBS_NAME][COLLECTION_NAME]
 

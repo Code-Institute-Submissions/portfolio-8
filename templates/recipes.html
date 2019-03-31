@@ -127,11 +127,12 @@
             
             
             {% for recipe in recipes %}
-            <a href="/detailpage"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+            
+            <a href="/detailpage/{{recipe._id}}"><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
             
             <div class="card-body">
               <h4 class="card-title">
-                <a href="/detailpage">{{recipe.recipe_name}}   </a>
+                <a href="/detailpage/{{recipe._id}}">{{recipe.recipe_name}}   </a>
               </h4>
               <p class="card-text">  {{recipe.description}}  </p>
             </div>

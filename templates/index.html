@@ -4,23 +4,28 @@
 
 
 
-       <div class="row">
+<div class="row">
          
-
-
       <div class="col-lg-8 col-md-10 mx-auto">
         <h5>Recently added recipes &darr; </h5>
-         {% for recipe in recipes %}
-        <div class="post-preview">
+        
+        {% for r in recipes %}
          
+        <div class="post-preview">
           <a href="/detailpage">
-             
+            
+              
             <h2 class="post-title"> 
-              {{recipe.recipe_name}}
+            
+               {{ r['recipe_name'] }}
+            
+          
+            
             </h2>
             
             <h3 class="post-subtitle"> 
-            {{recipe.description}} 
+              
+           {{ r['description'] }}
               
             </h3>
             
@@ -29,77 +34,11 @@
             <a href="/about">Niels</a>
             on March 10, 2019</p>
         </div>
+        
          {% endfor %}
 
         
         </div>
-        
-
-        <div class="col-lg-8 col-md-10 mx-auto">
-         {% for recipe in recipes %}
-        <div class="post-preview">
-         
-          <a href="/detailpage">
-             
-            <h2 class="post-title">
-              {{recipe.recipe_name}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{recipe.recipe_description}}
-            </h3>
-          </a>
-          <p class="post-meta">Dish cooked by
-            <a href="/about">Niels</a>
-            on March 10, 2019</p>
-        </div>
-         {% endfor %}
-
-        
-        <div class="col-lg-8 col-md-10 mx-auto">
-         {% for recipe in recipes %}
-        <div class="post-preview">
-         
-          <a href="/detailpage">
-             
-            <h2 class="post-title">
-              {{recipe.recipe_name}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{recipe.recipe_description}}
-            </h3>
-          </a>
-          <p class="post-meta">Dish cooked by
-            <a href="/about">Niels</a>
-            on March 10, 2019</p>
-        </div>
-         {% endfor %}
-   
-        
-        <div class="col-lg-8 col-md-10 mx-auto">
-         {% for recipe in recipes %}
-        <div class="post-preview">
-         
-          <a href="/detailpage">
-             
-            <h2 class="post-title">
-              {{recipe.recipe_name}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{recipe.recipe_description}}
-            </h3>
-          </a>
-          <p class="post-meta">Dish cooked by
-            <a href="/about">Niels</a>
-            on March 10, 2019</p>
-        </div>
-         {% endfor %}
- 
-        
-       
-       
-       
-       
-        <!-- Pager -->
         <div class="clearfix">
           <a class="btn btn-primary float-right" href="/recipes">More recipes &rarr;</a>
         </div>

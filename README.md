@@ -3,8 +3,8 @@
 
 
 This is the readme file for the online CookBook project. 
-This is a website where recipes from the Italian kitchen can be displayed. 
-In addition, the user of the website can also add recipes themselves (these can also be edited, updated or deleted).
+This is a website where recipes from the Italian kitchen are displayed. 
+In addition, the user of the website can also add, update, edit and remove recipes in accordance with the CRUD principles.
 
 
 Niels de Klerk (March, 2019)
@@ -13,23 +13,26 @@ Niels de Klerk (March, 2019)
 ## UX perspective 
 
 
-In the following link additional information concerning the UX/UI design can be found. 
-This includes wireframes and mockups and basic images for the branddesign: 
+This project had a preparation phase. Various topics were dealt with in this phase. 
+The results are included in a project location, which can be found at in the link below. 
+This includes wireframes and mockups and basic images for the branddesign. 
 
-https://drive.google.com/open?id=1Wcb2VyqjEw2pfl83DB4fwjMy4K5tzQ6Z
+Link to the external project documentation.
+https://drive.google.com/drive/folders/1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
+
 
 ## Features
 
 Existing Features (week 7 - 2019) 
 
-*	Main feature 1 - A splited SPI with a left frame for data, input fields, event handling and images, and on the right a rendered map in the specific UX/UI design of the project; 
-*	Main feature 2 - Integrated Google Places API, Google Maps JavaScript API, Directions API, Maps Embed API to load specific routes on the map; 
-*	Main feature 3 - Preselected routes defined that relies on the mentioned API's; 
-*	Main feature 4 - Accomodations data and images available using JQuery; 
-*	Feature UX/UI 1 – Splashscreen with specific UX/UI design as starting (and turnback) point and access to the SPI; 
-*	Feature UX/UI 2 – Easy and clear dark/grayscale design with bright and colorfull images that makes it more attractive for the user; 
-*	Proces/Flow  1 - Indicatiors (markers/button colors) that show the phase/status about actions that the user takes; 
-*	Proces/Flow  2 – Possibilty to switch between splashscreen and the SPI. 
+*	Main feature  - A splited SPI with a left frame for data, input fields, event handling and images, and on the right a rendered map in the specific UX/UI design of the project; 
+*	Main feature  - Integrated Google Places API, Google Maps JavaScript API, Directions API, Maps Embed API to load specific routes on the map; 
+*	Main feature - Preselected routes defined that relies on the mentioned API's; 
+*	Main feature  - Accomodations data and images available using JQuery; 
+*	Feature UX/UI  – Splashscreen with specific UX/UI design as starting (and turnback) point and access to the SPI; 
+*	Feature UX/UI  – Easy and clear dark/grayscale design with bright and colorfull images that makes it more attractive for the user; 
+*	Proces/Flow   - Indicatiors (markers/button colors) that show the phase/status about actions that the user takes; 
+*	Proces/Flow   – Possibilty to switch between splashscreen and the SPI. 
 
 Features Left to Implement (in a random order listed below)
 
