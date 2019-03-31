@@ -103,16 +103,20 @@
         <label for="FormControlTextarea1">Ingredients</label>
         <textarea class="form-control" name="ingredients" id="ingredients" rows="3" value="{{recipe.ingredients}}">{{recipe.ingredients}}</textarea>
       </div>
+
+<input class="btn btn-primary" type="submit" name="action" value="&#43; Edit">
+    
+    </div>
+
+<div class="form-group">
+        <label for="FormControlTextarea1">Recipe image</label>
+          <img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+      </div>
     
     </div>
 
   
-    <label>Upload Image</label>
-    <div class="input-group">
-      <span class="input-group-btn value="{{recipe.recipe_image}}">
-                <span class="btn btn-default btn-file">
-                    Browse… <input type="file" id="imgInp">
-                </span>
+  
       </span>
 
       <img id='img-upload' />
@@ -125,7 +129,7 @@
 
 
 
-<input class="btn btn-primary" type="submit" name="action" value="&#43; Edit">
+
  
 
 

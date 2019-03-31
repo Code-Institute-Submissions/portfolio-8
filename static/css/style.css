@@ -368,3 +368,14 @@ btn btn-primary{
     margin-top: 50px; 
 }
 
+.card-body{
+    padding: 0;
+    margin-bottom: 25px; 
+    background-color: #66cc99; 
+    color:white;
+}
+
+.card-body a{
+    margin-top: 5px; 
+    color:white;
+}

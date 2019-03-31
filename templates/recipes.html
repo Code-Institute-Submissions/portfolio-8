@@ -126,11 +126,11 @@
         
 
           {% for recipe in recipes %}
-          <a href="{{ recipe.recipe_image }}" /><img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+          <img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
 
           <div class="card-body">
             <h4 class="card-title">
-              <a href="{{ url_for('detailpage', recipe_id=recipe._id) }}">{{recipe.recipe_name}}   </a>
+              <a href="{{ url_for('detailpage', recipe_id=recipe._id) }}"> {{recipe.recipe_name}}   </a>
             </h4>
             <p class="card-text"> {{recipe.description}} </p>
           </div>
@@ -139,12 +139,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
 
 
     <script>
