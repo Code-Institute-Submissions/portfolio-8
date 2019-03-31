@@ -19,7 +19,6 @@ mongo = PyMongo(app)
 
 @app.route('/') 
 def index():
-    
     return render_template("index.html", page_title="Home",  recipes = mongo.db.recipes.find().sort('_id'))
     
 
@@ -47,17 +46,12 @@ def about_member(member_name):
 
 ### show recipe on detailpage (single recipe page)  ###     
         
-@app.route('/')
-@app.route('/detailpage/<recipe_id>  ')
+@app.route('/detailpage/<recipe_id>')
 def detailpage(recipe_id):
-    mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
-    return render_template("detailpage.html", recipes=mongo.db.recipes.find())   
+    recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    return render_template("detailpage.html", recipe=recipe)   
     
-@app.route('/')
-@app.route('/get_recipes/<recipe_id>')
-def get_recipes():
-    
-    return render_template("detailpage.html", recipes=mongo.db.recipes.find())
+
         
 
     
