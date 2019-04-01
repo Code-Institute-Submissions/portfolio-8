@@ -5,10 +5,9 @@
 
 
 
-
-
 <h2>{{recipe.recipe_name}} </h2>
 <h3>{{recipe.description}}</h3>
+<br>
 
 <i class="fa fa-map-marker" style="font-size:15px"></i>   Cuisine Region: {{recipe.cuisine_region}}
 
@@ -31,7 +30,7 @@
     <input name="firstname" type="text"> 
   </form>
 </div>
-
+<br>
 <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">EDIT</a>
       <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">DELETE</a>
 
@@ -48,6 +47,8 @@
   <div class="row">
     <div class="col-md-8">
       <img class="img-fluid" src="{{recipe.recipe_image}}" alt=""> 
+      <h3 class="my-3">Ingredients</h3>
+      <p>{{recipe.ingredients}}</p>
     </div>
     <div class="col-md-4">
       <h3 class="my-3">Preperation</h3>
@@ -73,7 +74,6 @@
 
 
 </div>
-<h3 class="my-3">Ingredients</h3>
-      <p>{{recipe.ingredients}}</p>
+
 
 {% endblock %}

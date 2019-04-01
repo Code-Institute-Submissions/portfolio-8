@@ -63,6 +63,7 @@
     </div>
 
 
+
     <div class="col-md-6" <div class="form-group">
 
       <div class="form-group">
@@ -103,21 +104,19 @@
         <label for="FormControlTextarea1">Ingredients</label>
         <textarea class="form-control" name="ingredients" id="ingredients" rows="3" value="{{recipe.ingredients}}">{{recipe.ingredients}}</textarea>
       </div>
+<div class="form-group">
+          <label for="FormControlInput2">Change recipe image</label>
+          <input type="text" class="form-control" name="description" id="recipe_image" placeholder="{{recipe.recipe_image}}" class="validate" >
+          <option value="{{recipe.recipe_description}}"></option>
+        </div>
+
+
 
 <input class="btn btn-primary" type="submit" name="action" value="&#43; Edit">
     
     </div>
 
-<div class="form-group">
-        <label for="FormControlTextarea1">Recipe image</label>
-          <img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
-      </div>
-    
-    </div>
 
-  
-  
-      </span>
 
       <img id='img-upload' />
     </div>

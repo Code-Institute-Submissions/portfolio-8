@@ -237,6 +237,7 @@ h5{
 
 h3{
     color: #B8860B;
+    font-size: 20px; 
 }
 
 .button2, input{
@@ -256,8 +257,8 @@ h3{
 }
 
 h2 a {
-    color: #ff3838;
-    font-size: 50px; 
+
+    font-size: 35px; 
     font-weight: bolder; 
 }
 
@@ -373,9 +374,22 @@ btn btn-primary{
     margin-bottom: 25px; 
     background-color: #66cc99; 
     color:white;
+    
+    
 }
 
 .card-body a{
-    margin-top: 5px; 
+    margin-top: 2px; 
     color:white;
+    margin-left: 5px;
+    font-size: 25px; 
+    
+}
+
+.exampleFormControlSelect2{
+    color:gold;
+}
+
+.btn:not{
+    cursor: none;
 }

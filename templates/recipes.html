@@ -126,11 +126,11 @@
         
 
           {% for recipe in recipes %}
-          <img class="card-img-top" src="{{recipe.recipe_image}}" alt="demo"></a>
+          <img class="card-img-top" src="{{recipe.recipe_image}}" alt=""></a>
 
           <div class="card-body">
             <h4 class="card-title">
-              <a href="{{ url_for('detailpage', recipe_id=recipe._id) }}"> {{recipe.recipe_name}}   </a>
+              <a href="{{ url_for('detailpage', recipe_id=recipe._id) }}">{{recipe.recipe_name}}   </a>
             </h4>
             <p class="card-text"> {{recipe.description}} </p>
           </div>
