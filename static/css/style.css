@@ -237,7 +237,7 @@ h5{
 
 h3{
     color: #B8860B;
-    font-size: 20px; 
+    font-size: 26px; 
 }
 
 .button2, input{
@@ -246,6 +246,7 @@ h3{
     border-style:solid;
     border:none;
     margin-top:20px;
+    width: 100px;
 }
 
 .form1{
@@ -377,6 +378,8 @@ btn btn-primary{
     
 }
 
+
+
 body{
     font-size: 18px; 
 }
@@ -401,13 +404,14 @@ body{
 
   background-color: transparent;
   text-decoration: none;
-
+font-size: 20px; 
   position: relative;
   vertical-align: middle;
   text-align: center;
   display: inline-block;
   color: #8a8a8a;
   transition: all ease 0.4s;
+  border:none;
 }
 
 .button-like span {
@@ -419,50 +423,54 @@ body{
   transition: all ease 0.4s;
 }
 
-.button-like:focus {
+.button-like:clicked {
   background-color: transparent;
 }
 
-.button-like:focus .fa,
-.button-like:focus span {
+.button-like:clicked .fa,
+.button-like:clicked span {
   color: #8a8a8a;
-}
-
-.button-like:hover {
-  border-color: #cc4b37;
-  background-color: transparent;
-}
-
-.button-like:hover .fa,
-.button-like:hover span {
-  color: #cc4b37;
-}
-
-.liked {
-  background-color: #cc4b37;
-  border-color: #cc4b37;
-}
-
-.liked .fa,
-.liked span {
-  color: #fefefe;
-}
-
-.liked:focus {
-  background-color: #cc4b37;
-}
-
-.liked:focus .fa,
-.liked:focus span {
-  color: #fefefe;
-}
-
-.liked:hover {
-  background-color: #cc4b37;
-  border-color: #cc4b37;
 }
 
 .liked:hover .fa,
 .liked:hover span {
   color: #fefefe;
 }
+
+
+.button-like:hover .fa,
+.button-like:hover span {
+  color: #cc4b37;
+}
+
+
+
+.button-like:focus .fa,
+.button-like:focus span {
+  color: #cc4b37;
+}
+
+.button-like:blur .fa,
+.button-like:blur span {
+  color: #fefefe;
+}
+
+
+.upvotes {
+    margin-left: 2px;
+}
+
+.btn-primary-del{
+background-color: #b30000;
+  border: none;
+  color: white;
+  padding: 14px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+

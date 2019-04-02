@@ -4,56 +4,39 @@
 <h2> {{ page_title }} </h2>
 
 
-        
-
-
-
-<h2>{{recipe.recipe_name}} <button class="button button-like">
+<h2>{{recipe.recipe_name}} <button class="button button-like" type="button"  input id="likes" name="likes" onClick="onClick()">
   <i class="fa fa-heart"></i>
- 
-</button>
-
-
+  
 
  </h2> 
  
 
-
-
 <h3>{{recipe.description}}</h3>
 <br>
-
+  <form>
 <i class="fa fa-map-marker" style="font-size:15px"></i>   Cuisine Region: {{recipe.cuisine_region}}
 
-
+<i class="fas fa-allergies " style="font-size:15px"></i>    Allergens:  {{recipe.allergens}}
 
 <div clas="upvotes">
-  <form>
-    <i class="fa fa-thumbs-up" aria-hidden="true"></i> Likes:
-    <input name="firstname" type="text"> 
-  </form>
 
-  <form>
-    <i class="far fa-eye" aria-hidden="true"></i> Views:
-    <input name="firstname" type="text"> 
+    <i class="fa fa-heart" aria-hidden="true"></i> Likes: <a id="clicks">0</a>
+    <input name="firstname" type="text" id="clicks"> 
 
-  </form>
 
-  <form>
     <i class="fa fa-user-circle" aria-hidden="true"> </i> Author: {{recipe.author_name}}
     <input name="firstname" type="text"> 
-  </form>
-</div>
-<br>
-<a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">EDIT</a>
-      <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">DELETE</a>
 
+  </form>
+ 
+  
+ <h3 class="my-3">Ingredients</h3>
+      <p>{{recipe.ingredients}}</p>
 
 <div class="recipeboxdetail">
 
 <div class="container">
 
-  
 
   <h1 class="my-4">
     <small></small>
@@ -61,11 +44,9 @@
   <div class="row">
     <div class="col-md-8">
       <img class="img-fluid" src="{{recipe.recipe_image}}" alt=""> 
-      <h3 class="my-3">Ingredients</h3>
-      <p>{{recipe.ingredients}}</p>
+  
+     
     </div>
-    
-    
     
     
     <div class="col-md-4">
@@ -73,15 +54,17 @@
       <p>{{recipe.cooking_instruction}}</p>
       
       </ul>
+      
+  
     </div>
     <div>
+     <br>
+      
+   <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">EDIT</a>
+      <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn-del btn-primary-del">DELETE</a>
       
       
 
-      <br>
-      
-      
-    
      </div>
      
   </div>
@@ -103,7 +86,14 @@ $(function() {
     })
 });
 </script>
-
+ <script type="text/javascript">
+    var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
+    
 
 
 {% endblock %}

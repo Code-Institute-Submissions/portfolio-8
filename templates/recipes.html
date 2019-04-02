@@ -119,8 +119,10 @@
       
       <div class="row">
         
-        <div class="col-md-6">
+        <div class="col-md-8">
       {% for recipe in recipes %}
+
+<a href="{{ url_for('detailpage', recipe_id=recipe._id) }}">
 
           <img class="card-img-top" src="{{recipe.recipe_image}}" alt=""></a>
 

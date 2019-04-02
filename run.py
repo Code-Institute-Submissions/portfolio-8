@@ -116,8 +116,10 @@ def update_recipe(recipe_id):
         'dish_type':request.form.get('dish_type'),
         'recipe_image': request.form.get('recipe_image'),
         'cooking_instruction' : request.form.get ('cooking_instruction'),
+        'likes' : request.form.get ('likes'),
+        'views' : request.form.get ('views'),
         
-      
+     
     })
     
     return redirect(url_for('get_recipes'))
@@ -137,6 +139,17 @@ def contact():
     if request.method == "POST":
         flash("Thanks, {}, I have recieved your message!".format(request.form["name"]))
     return render_template("contact.html", page_title="Contact")
+
+
+
+### Filtering searches ### 
+
+@app.route('/results')
+def search_results(search):
+    results = []
+    search_string = search.data['search']
+
+
     
   
 ### run location ### 
