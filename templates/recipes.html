@@ -28,104 +28,100 @@
 
 
 
-  <h2>Filter recipes list</h2>
-
+  <h2>Filter recipes</h2>
+  
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <div class="form-group">
+      <div class="form-group">
+            
+            <label for="exampleFormControlSelect2">Dish type</label>
+        <select multiple class="form-control" name="dish_type" id="5c8fba58da02b59e8e4a1f20">
+        <option>Antipasti</option>
+        <option>Risotto</option>
+        <option>Pizza</option>
+        <option>Pasta</option>
+        <option>Rice</option>
+        </select>
+        </div>
+    </div>
 
-          <label for="exampleFormControlSelect2">Dish type</label>
-          <select multiple class="form-control" name="dish_type" id="5c8fba58da02b59e8e4a1f20">
-      <option>Antipasti</option>
-      <option>Risotto</option>
-      <option>Pizza</option>
-      <option>Pasta</option>
-      <option>Rice</option>
+     <div class="col-sm-4">
+      <label for="exampleFormControlSelect2">Author</label>
+       <select multiple class="form-control" name="dish_type" id="dish_type">
+        <option>Anna</option>
+        <option>Anthony</option>
+        <option>Niels</option>
+      </select>
+      </div>
+  </div>
+  
+   <div class="row">
+  
+      <div class="col-sm-3">
+        <div class="form-group">
+         <label for="exampleFormControlSelect2">Cuisine region</label>
+         <select multiple class="form-control" name="cuisine_region" id="cuisine_region">
+        <option>Tuscany</option>
+        <option>Sicily</option>
+        <option>Roma</option>
+        <option>Abruzzo</option>
       </select>
         </div>
-      </div>
+     </div>
 
-      <div class="col-sm-4">
-        <label for="exampleFormControlSelect2">Author</label>
-        <select multiple class="form-control" name="dish_type" id="dish_type">
-      <option>Anna</option>
-      <option>Anthony</option>
-      <option>Niels</option>
-    </select>
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-sm-3">
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Cuisine region</label>
-          <select multiple class="form-control" name="cuisine_region" id="cuisine_region">
-      <option>Tuscany</option>
-      <option>Sicily</option>
-      <option>Roma</option>
-      <option>Abruzzo</option>
-    </select>
-        </div>
-      </div>
-
-      <div class="col-sm-3">
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Allergens</label>
+    <div class="col-sm-3">
+       <div class="form-group">
+         <label for="exampleFormControlSelect2">Allergens</label>
           <select multiple class="form-control" name="allergens" id="allergens">
-      <option>Nuts</option>
-      <option>Wheet</option>
-      <option>Oatmilk</option>
-    </select>
+        <option>Nuts</option>
+        <option>Wheet</option>
+        <option>Oatmilk</option>
+      </select>
         </div>
-      </div>
-
-      <div class="col-sm-3">
+     </div>
+  
+     <div class="col-sm-3">
         <div class="form-group">
-          <label for="exampleFormControlSelect2">Difficulty</label>
-          <select multiple class="form-control" name="difficulty" id="difficulty">
-      <option>Easy</option>
-      <option>Medium</option>
-      <option>Expert</option>
-    </select>
+         <label for="exampleFormControlSelect2">Difficulty</label>
+       <select multiple class="form-control" name="difficulty" id="difficulty">
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Expert</option>
+      </select>
         </div>
-      </div>
-
-      <div class="col-sm-3">
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Cooking time</label>
-          <select multiple class="form-control" name="cooking_time" id="cooking_time">
-      <option>15 - 20 min. </option>
-      <option>20 - 45 min. </option>
-      <option>45 - 120 min. </option>
-    </select>
-        </div>
-      </div>
     </div>
+  
+     <div class="col-sm-3">
+        <div class="form-group">
+         <label for="exampleFormControlSelect2">Cooking time</label>
+          <select multiple class="form-control" name="cooking_time" id="cooking_time">
+        <option>15 - 20 min. </option>
+        <option>20 - 45 min. </option>
+        <option>45 - 120 min. </option>
+      </select>
+    </div>
+    </div>
+  </div>
 
 
-    <a class="btn btn-primary-results" type="submit" name="action" href="/recipes" role="button"> Show results
+  <a class="btn btn-primary-results" type="submit" name="action" href="/recipes" role="button"> Show results
      </a>
 
-
-    <p>You can see the results of your filtered preferences below in the recipes list &darr;</p>
-
+  <p>You can see the results of your filtered preferences below in the recipes list &darr;</p>
 
 
 
-    <div class="col s3">
+<div class="col s3">
 
-    </div>
-  
-  
-    <div class="container">
+ </div>
+  <div class="container">
+      
       <div class="row">
-        <div class="col-md-6">
-
         
+        <div class="col-md-6">
+      {% for recipe in recipes %}
 
-          {% for recipe in recipes %}
           <img class="card-img-top" src="{{recipe.recipe_image}}" alt=""></a>
 
           <div class="card-body">
@@ -137,7 +133,7 @@
 
           {% endfor %}
         </div>
-      </div>
+    </div>
     </div>
 
 
@@ -162,4 +158,4 @@
     </script>
 
 
-    {% endblock %}
+ {% endblock %}

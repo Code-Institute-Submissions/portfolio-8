@@ -4,8 +4,22 @@
 <h2> {{ page_title }} </h2>
 
 
+        
 
-<h2>{{recipe.recipe_name}} </h2>
+
+
+<h2>{{recipe.recipe_name}} <button class="button button-like">
+  <i class="fa fa-heart"></i>
+ 
+</button>
+
+
+
+ </h2> 
+ 
+
+
+
 <h3>{{recipe.description}}</h3>
 <br>
 
@@ -50,6 +64,10 @@
       <h3 class="my-3">Ingredients</h3>
       <p>{{recipe.ingredients}}</p>
     </div>
+    
+    
+    
+    
     <div class="col-md-4">
       <h3 class="my-3">Preperation</h3>
       <p>{{recipe.cooking_instruction}}</p>
@@ -74,6 +92,18 @@
 
 
 </div>
+
+<script>
+  $(document).foundation();
+
+$(function() {
+  $('.button-like')
+    .bind('click', function(event) {
+      $(".button-like").toggleClass("liked");
+    })
+});
+</script>
+
 
 
 {% endblock %}

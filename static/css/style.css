@@ -370,16 +370,19 @@ btn btn-primary{
 }
 
 .card-body{
-    padding: 0;
-    margin-bottom: 25px; 
     background-color: #66cc99; 
     color:white;
+    margin-bottom: 12px; 
     
     
 }
 
+body{
+    font-size: 18px; 
+}
+
 .card-body a{
-    margin-top: 2px; 
+
     color:white;
     margin-left: 5px;
     font-size: 25px; 
@@ -392,4 +395,74 @@ btn btn-primary{
 
 .btn:not{
     cursor: none;
+}
+
+.button-like {
+
+  background-color: transparent;
+  text-decoration: none;
+
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  color: #8a8a8a;
+  transition: all ease 0.4s;
+}
+
+.button-like span {
+  margin-left: 0.5rem;
+}
+
+.button-like .fa,
+.button-like span {
+  transition: all ease 0.4s;
+}
+
+.button-like:focus {
+  background-color: transparent;
+}
+
+.button-like:focus .fa,
+.button-like:focus span {
+  color: #8a8a8a;
+}
+
+.button-like:hover {
+  border-color: #cc4b37;
+  background-color: transparent;
+}
+
+.button-like:hover .fa,
+.button-like:hover span {
+  color: #cc4b37;
+}
+
+.liked {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked .fa,
+.liked span {
+  color: #fefefe;
+}
+
+.liked:focus {
+  background-color: #cc4b37;
+}
+
+.liked:focus .fa,
+.liked:focus span {
+  color: #fefefe;
+}
+
+.liked:hover {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked:hover .fa,
+.liked:hover span {
+  color: #fefefe;
 }
