@@ -16,7 +16,7 @@
   <form>
 <i class="fa fa-map-marker" style="font-size:15px"></i>   Cuisine Region: {{recipe.cuisine_region}}
 
-<i class="fas fa-allergies " style="font-size:15px"></i>    Allergens:  {{recipe.allergens}}
+<i class="fas fa-allergies " style="font-size:15px; margin-left:7px;"></i>    Allergens:  {{recipe.allergens}}
 
 <div clas="upvotes">
 
@@ -59,11 +59,13 @@
     </div>
     <div>
      <br>
-      
+    </div>
+    <div class="container">
+    <div class="col-md-12">
    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">EDIT</a>
       <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn-del btn-primary-del">DELETE</a>
-      
-      
+      </div>
+      </div>  
 
      </div>
      

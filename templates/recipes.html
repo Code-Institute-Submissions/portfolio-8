@@ -30,12 +30,12 @@
 
   <h2>Filter recipes</h2>
   
-  <div class="container">
+  
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
       <div class="form-group">
             
-            <label for="exampleFormControlSelect2">Dish type</label>
+        <label for="exampleFormControlSelect2"><i class="fas fa-pizza-slice" style="font-size:15px"></i> Dish type</label>
         <select multiple class="form-control" name="dish_type" id="5c8fba58da02b59e8e4a1f20">
         <option>Antipasti</option>
         <option>Risotto</option>
@@ -46,8 +46,9 @@
         </div>
     </div>
 
-     <div class="col-sm-4">
-      <label for="exampleFormControlSelect2">Author</label>
+     <div class="col-sm-3">
+         <div class="form-group">
+      <label for="exampleFormControlSelect2"><i class="fa fa-user" style="font-size:15px"></i> Author</label>
        <select multiple class="form-control" name="dish_type" id="dish_type">
         <option>Anna</option>
         <option>Anthony</option>
@@ -55,12 +56,23 @@
       </select>
       </div>
   </div>
+  <div class="form-group">
+  <div class="col-sm-3">
+      <label for="exampleFormControlSelect2"><i class="fa fa-heart" style="font-size:15px"></i> Likes</label>
+       <select multiple class="form-control" name="likes" id="likes">
+        <option>0 - 3 </option>
+        <option>3 - 10</option>
+        <option> 10+ </option>
+      </select>
+      </div>
+  </div>
+  
   
    <div class="row">
   
       <div class="col-sm-3">
         <div class="form-group">
-         <label for="exampleFormControlSelect2">Cuisine region</label>
+         <label for="exampleFormControlSelect2"><i class="fa fa-map-marker" style="font-size:15px"></i> Cuisine region</label>
          <select multiple class="form-control" name="cuisine_region" id="cuisine_region">
         <option>Tuscany</option>
         <option>Sicily</option>
@@ -72,7 +84,7 @@
 
     <div class="col-sm-3">
        <div class="form-group">
-         <label for="exampleFormControlSelect2">Allergens</label>
+         <label for="exampleFormControlSelect2"><i class="fa fa-map-marker" style="font-size:15px;"></i> Allergens</label>
           <select multiple class="form-control" name="allergens" id="allergens">
         <option>Nuts</option>
         <option>Wheet</option>
@@ -83,7 +95,7 @@
   
      <div class="col-sm-3">
         <div class="form-group">
-         <label for="exampleFormControlSelect2">Difficulty</label>
+         <label for="exampleFormControlSelect2"><i class="fa fa-signal" style="font-size:15px"></i> Difficulty</label>
        <select multiple class="form-control" name="difficulty" id="difficulty">
         <option>Easy</option>
         <option>Medium</option>
@@ -91,16 +103,25 @@
       </select>
         </div>
     </div>
+    
+    
   
      <div class="col-sm-3">
         <div class="form-group">
-         <label for="exampleFormControlSelect2">Cooking time</label>
+         <label for="exampleFormControlSelect2"><i class="fa fa-clock-o" style="font-size:15px"></i> Cooking time</label>
           <select multiple class="form-control" name="cooking_time" id="cooking_time">
         <option>15 - 20 min. </option>
         <option>20 - 45 min. </option>
         <option>45 - 120 min. </option>
       </select>
+      
+      
+      
+      </div>
     </div>
+</div>    
+    
+    
     </div>
   </div>
 
