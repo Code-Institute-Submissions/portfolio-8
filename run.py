@@ -45,7 +45,7 @@ def about_member(member_name):
   
 
 ### show recipe on detailpage (single recipe page)  ###     
-        
+          
 @app.route('/detailpage/<recipe_id>')
 def detailpage(recipe_id):
     recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
