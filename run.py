@@ -10,7 +10,7 @@ app = Flask (__name__)
 app.config["MONGO_DBNAME"] = 'recipe_book'
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 mongo = PyMongo(app)
-app.secret_key = 'some_secret'
+
 
 ### routing the index page ###
 
