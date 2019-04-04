@@ -22,7 +22,7 @@ Link to the external project documentation: https://drive.google.com/open?id=1-J
 
 ## Features
 
-Existing Features (week 7 - 2019) 
+Existing Features (week 12 - 2019) 
 
 * Landing page with a list of recently added recipes (clickable overview)
 * About page with background information about the function of the website and a image

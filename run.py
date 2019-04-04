@@ -6,11 +6,9 @@ from bson.objectid import ObjectId
 from pprint import pprint
 
 app = Flask (__name__)
-app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 
 app.config["MONGO_DBNAME"] = 'recipe_book'
-app.config["MONGO_URI"] = 'mongodb+srv://root:pwvanr00t1@mycluster-yaqc7.mongodb.net/recipe_book?retryWrites=true'
-
+app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 mongo = PyMongo(app)
 app.secret_key = 'some_secret'
 
@@ -147,14 +145,18 @@ def contact():
 @app.route('/recipes')
 def search_results(search):
     results = []
-    search_string = search.data['search'],
+    search_recipe = search.recipes['search'],
     recipes = mongo.db.recipes
+    all_recipes =  mongo.db.recipes.find()
     
+
   
 ### run location ### 
-    
+ 
+ 
+   
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP'),
-            port=int(os.environ.get('PORT')),
-            debug=True)
+    app.run(host=os.environ.get('IP', "0.0.0.0"),
+            port=int(os.environ.get("PORT", "5000")),
+            debug=False)
 
