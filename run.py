@@ -144,12 +144,11 @@ def contact():
 
 ### Filtering searches ### 
 
-@app.route('/results')
+@app.route('/recipes')
 def search_results(search):
     results = []
-    search_string = search.data['search']
-
-
+    search_string = search.data['search'],
+    recipes = mongo.db.recipes
     
   
 ### run location ### 
