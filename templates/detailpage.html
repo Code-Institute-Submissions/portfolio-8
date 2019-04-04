@@ -30,10 +30,13 @@
   </form>
  
   
- <h3 class="my-3">Ingredients</h3>
+ 
+
+      <h3 class="my-3">Ingredients</h3>
       <p>{{recipe.ingredients}}</p>
 
 <div class="recipeboxdetail">
+  
 
 <div class="container">
 
@@ -54,18 +57,17 @@
       <p>{{recipe.cooking_instruction}}</p>
       
       </ul>
-      
+            <h3 class="my-3">Modify</h3>
+          <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">EDIT</a>
+      <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn-del btn-primary-del">DELETE</a>
   
     </div>
     <div>
      <br>
     </div>
-    <div class="container">
-    <div class="col-md-12">
-   <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn btn-primary">EDIT</a>
-      <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn-del btn-primary-del">DELETE</a>
-      </div>
-      </div>  
+ 
+
+     
 
      </div>
      

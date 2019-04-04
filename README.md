@@ -5,6 +5,8 @@
 This is the readme file for the online CookBook project. 
 This is a website where recipes from the Italian kitchen are displayed. 
 In addition, the user of the website can also add, update, edit and remove recipes in accordance with the CRUD principles.
+The user also can filter recipes based on the following criterea: Dish type, Author, Cuisine Region, Likes, Allergens, Difficulty and Cooking time. 
+The website is fitted for mobile, tablet and desktop. 
 
 
 Niels de Klerk (March, 2019)
@@ -18,21 +20,20 @@ The results are included in a project location, which can be found at in the lin
 This includes wireframes and mockups and basic images for the branddesign. 
 
 Link to the external project documentation.
-https://drive.google.com/drive/folders/1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
+
+https://drive.google.com/open?id=1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
 
 
 ## Features
 
 Existing Features (week 7 - 2019) 
 
-*	Main feature  - A splited SPI with a left frame for data, input fields, event handling and images, and on the right a rendered map in the specific UX/UI design of the project; 
-*	Main feature  - Integrated Google Places API, Google Maps JavaScript API, Directions API, Maps Embed API to load specific routes on the map; 
-*	Main feature - Preselected routes defined that relies on the mentioned API's; 
-*	Main feature  - Accomodations data and images available using JQuery; 
-*	Feature UX/UI  – Splashscreen with specific UX/UI design as starting (and turnback) point and access to the SPI; 
-*	Feature UX/UI  – Easy and clear dark/grayscale design with bright and colorfull images that makes it more attractive for the user; 
-*	Proces/Flow   - Indicatiors (markers/button colors) that show the phase/status about actions that the user takes; 
-*	Proces/Flow   – Possibilty to switch between splashscreen and the SPI. 
+* Landing page with a list of recently added recipes (clickable overview)
+* About page with background information about the function of the website and a image
+* Recipes page with some information about the recipes, a filter function, a 'add your own recipe' function, a help function, and a overview of all recipes with image. 
+* Detailpage of a recipe, including: Dynamicaly generated recipe name, description, cuisine region, allergens information, author, likes, ingredients, image and cooking instruction. And modify options: edit and delete recipe. 
+* Edit page with the possibility to edit all functions mentioned in the previous feature description.
+* Contact page with the possibily to write a message. 
 
 Features Left to Implement (in a random order listed below)
 

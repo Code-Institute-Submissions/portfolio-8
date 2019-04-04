@@ -50,7 +50,7 @@ def about_member(member_name):
 def detailpage(recipe_id):
     recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     return render_template("detailpage.html", recipe=recipe)   
-    
+       
 @app.route('/')
 @app.route('/get_recipes/<recipe_id>')
 def get_recipes():
