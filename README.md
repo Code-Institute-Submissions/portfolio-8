@@ -2,8 +2,8 @@
 
 
 This is the readme file for the online CookBook milestone project. 
-The main purpose of this is project is to provide a recipes website with a database including recipes from the Italian kitchen.
-In addition, the user of the website can add, update, edit and remove recipes in accordance with the CRUD principles.
+the main purpose of this website is to offer a so-called 'online cookbook'. The execution is a blog-like cookbook of specific dishes from the Italian kitchen. This data-driven website is dynamic in nature. This means that
+the user of the website can add, update, edit and remove recipes in accordance with the CRUD principles.
 The user also can filter recipes based on the following criterea: Dish type, Author, Cuisine Region, Likes, Allergens, Difficulty and Cooking time. 
 The website is fitted for mobile, tablet and desktop (fully responsive). 
 
@@ -68,7 +68,7 @@ In this section all of the languages, frameworks, libraries, and other tools tha
     *Fontawesome as a toolkit has been used to the UX/UI, especialy for icon styling. 
 
 *   Heroku:
-*   *In this project data is actually transported between frontend and backend, GitHub pages are no longer sufficient as a project deploy location on its own. 
+    In this project data is actually transported between frontend and backend, GitHub pages are no longer sufficient as a project deploy location on its own. 
     That is why Heroku has been used to facilitate this functions of the application.
     *During the realization of the project, Git deployment was daily used.
 
@@ -146,9 +146,10 @@ The 'Test Runner' will execute the tetst in order to summarize the results. The 
 | 3	|   Width of page not neat on all views during testphase  | Created a container class with a max width of 700px on all elements |
 | 4 | Recipe images did not load via Flask/Python   | Added url based datbasefields to routing paths  |
 | 5 | New recipes only loaded on /recipes page not in overview on /index  | Added additional Flask routing with specific fields on needed places  |
-| 6 | Option field in form gave duplicate data when refreshing page  | Changed Flask routing paths to single injection instead of multiinjection in option form fields  |
-| 7 | Heroku could not load app from heroku page (git staging had no issues) | Changed Procfile to similair procfile on Heroku dashboard  |
-| 8 | Filter route wont show result of selected filter options | Still an open issue (4-4-19)  |
+| 6 | Database data is not shown on front-end   | Changed the @app.route with the correct paths. Issue was that the data was searched in the wrong db collection  |
+| 7 | Option field in form gave duplicate data when refreshing page  | Changed Flask routing paths to single injection instead of multiinjection in option form fields  |
+| 8 | Heroku could not load app from heroku page (git staging had no issues) | Changed Procfile to similair procfile on Heroku dashboard  |
+| 9 | Filter route wont show result of selected filter options | Still an open issue (4-4-19)  |
 
 ## Work method 
 
@@ -175,5 +176,5 @@ This README file is based on the Code Institute template.
 ## Media
 
 *  All media files, used for the design of the project are selfmade. 
-*  The used recipe images/photo's are downloaded from the Shutterstock database (https://www.shutterstock.com). 
+*  The used recipe images/photo's are downloaded from the Shutterstock database (https://www.shutterstock.com), from Istockphoto (https://www.istockphoto.com/nl), and from Adobe Images (used Adobe Pro)
 
