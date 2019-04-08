@@ -22,6 +22,15 @@ This includes wireframes and mockups and basic images for the branddesign.
 
 Link to the external project documentation: https://drive.google.com/open?id=1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
 
+## Database schema and initial design
+
+In order to make a good start with this project, careful consideration was first given to the exact data flows that will become part of the (dynamic) content.<br/>
+It has been decided to use a non-relational data structure (No SQL). <br/>
+This is because it is quite straightforward to link recipes (as a main part) to different subcategories (authors, geographic data, difference in dishes, etc.)<br/> 
+Based on the theory studied, the data structure was also chosen and this is good. to link to Heroku as a deployment platform.
+<br/>
+Drafts and the defensive version of the database schema can be found in the following folder:
+https://drive.google.com/open?id=1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
 
 ## Features
 

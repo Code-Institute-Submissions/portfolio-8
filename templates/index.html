@@ -1,48 +1,45 @@
-
-{% extends 'base.html' %}
-{% block content %} 
+{% extends 'base.html' %} {% block content %}
 
 
 
 <div class="row">
-         
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <h5>Recently added recipes &darr; </h5>
-        
-        {% for recipe in recipes %}
-         
-        <div class="post-preview">
-          <a href="/detailpage">
-            
-              
-            <h2 class="post-title"> 
-            
-              <a href="{{ url_for('detailpage', recipe_id=recipe._id) }}"> {{recipe.recipe_name}}   </a>
-            
-          
-            
-            </h2>
-            
-            <h3 class="post-subtitle"> 
-              
-           {{recipe.description}} 
-              
-            </h3>
-            
-          </a>
-          <p class="post-meta">This dish is cooked by chef {{recipe.author_name}}
-            
-           </p>
-        </div>
-        
-         {% endfor %}
 
-        
-        </div>
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="/recipes">More recipes &rarr;</a>
-        </div>
-      </div>
+  <div class="col-lg-8 col-md-10 mx-auto">
+    <h5>Recently added recipes &darr; </h5>
+
+    {% for recipe in recipes %}
+
+    <div class="post-preview">
+      <a href="/detailpage">
+
+
+        <h2 class="post-title">
+
+          <a href="{{ url_for('detailpage', recipe_id=recipe._id) }}"> {{recipe.recipe_name}}   </a>
+
+
+
+        </h2>
+
+        <h3 class="post-subtitle">
+
+          {{recipe.description}}
+
+        </h3>
+
+      </a>
+      <p class="post-meta">This dish is cooked by chef {{recipe.author_name}}
+
+      </p>
     </div>
-    
-{% endblock %} 
+
+    {% endfor %}
+
+  </div>
+  <div class="clearfix">
+    <a class="btn btn-primary float-right" href="/recipes">More recipes &rarr;</a>
+  </div>
+</div>
+</div>
+
+{% endblock %}
