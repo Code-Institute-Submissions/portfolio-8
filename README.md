@@ -7,7 +7,7 @@ This is the readme file for the online CookBook milestone project of Code Instit
 The main purpose of this website is to show recipes in a so-called 'online cookbook'.<br/> 
 The chosen design and (layout)style is a blog-like cookbook of specific dishes from the Italian kitchen.<br/>
 This data-driven website is dynamic in nature, this means that the user of the website can add, update, edit and remove recipes in accordance with the CRUD principles.<br/>
-The user also can filter recipes based on the following criterea: Dish type, Author, Cuisine Region, Likes, Allergens, Difficulty and Cooking time. 
+The user also can filter recipes based on the following criterea: Dish type, Author, Cuisine Region, Likes, Allergens, Difficulty and Cooking time. It is possible to group and summarise the recipes on the site, based on their attributes as mentioned above. 
 The website is fitted for mobile, tablet and desktop (fully responsive). 
 
 
@@ -35,7 +35,7 @@ Existing Features (week 12 - 2019)
 * Edit page with the possibility to edit all functions mentioned in the previous feature description, including recipe image source. 
 * Contact page with the possibily to write and send a text message. 
 
-Features Left to Implement (in a random order listed below)
+Features Left to Implement 
 
 * Create a simple user login and move the 'edit / update' and 'delete' functions so that they are only available for a logged in user. (optional project requirement)
 
@@ -46,7 +46,7 @@ I have decided to use a non-relational data structure (No SQL).
 This because it is quite straightforward to link recipes (as a main part / general data) to different subcategories (authors, geographic data, difference in dishes, etc.)
 Based on the studied theory, I came to the conclusion that the combination of Flask, MongoDB and Heroku will work well.
 
-Drafts and the defensive version of the database schema can be found in the following folder:
+Drafts and the final version of the database schema can be found in the following folder:
 https://drive.google.com/open?id=1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
 
 
@@ -183,6 +183,5 @@ This README file is based on the Code Institute template.
 
 ## Media
 
-*  All media files, used for the design of the project are selfmade. 
 *  The used recipe images/photo's are downloaded from the Shutterstock database (https://www.shutterstock.com), from Istockphoto (https://www.istockphoto.com/nl), and from Adobe Images (used Adobe Pro)
 
