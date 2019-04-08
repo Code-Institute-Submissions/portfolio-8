@@ -267,6 +267,10 @@ h2 a {
     color:#B8860B;
 }
 
+.FormControlTextarea1{
+width:400px;
+}
+
 .label{
     color:#B8860B;
 }
@@ -324,10 +328,6 @@ h2 a {
 }
 
 
-.form-control1{
-    width: 400px;
-    
-}
 
 .form-control{
     width: 200px; 

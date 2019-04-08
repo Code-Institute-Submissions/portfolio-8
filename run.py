@@ -5,8 +5,10 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from pprint import pprint
 
+
 app = Flask (__name__)
 
+app.config["MONGO_URI"] = 'mongodb+srv://root:pwvanr00t1@mycluster-yaqc7.mongodb.net/recipe_book?retryWrites=true'
 app.config["MONGO_DBNAME"] = 'recipe_book'
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 mongo = PyMongo(app)
@@ -57,13 +59,22 @@ def get_recipes():
         
 
     
-### show all recipes and filter categories on recipes.html page  ###   
+### show recipes and filter categories on recipes.html page  ###   
 
-
+@app.route ('/')
 @app.route('/recipes')
 def recipes():
-        return render_template("recipes.html", page_title="Recipes", recipes=mongo.db.recipes.find())
     
+    recipes = mongo.db.recipes
+    results = recipes.find('recipe_name')
+    
+    output = ''
+    for recipes in recipes: 
+        output +- recipes['recipe_name'] + ' - ' + str(recipes['recipe_description']) + '<br>'
+    
+    return render_template("recipes.html", page_title="Recipes", recipes=mongo.db.recipes.find())
+        
+       
               
 ### Follow page (show all recipes) ###                  
               
@@ -140,17 +151,8 @@ def contact():
 
 
 
-### Filtering searches ### 
 
-@app.route('/recipes')
-def search_results(search):
-    results = []
-    search_recipe = search.recipes['search'],
-    recipes = mongo.db.recipes
-    all_recipes =  mongo.db.recipes.find()
-    
 
-  
 ### run location ### 
  
  
@@ -158,5 +160,5 @@ def search_results(search):
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', "0.0.0.0"),
             port=int(os.environ.get("PORT", "5000")),
-            debug=False)
+            debug=True)
 
