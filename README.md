@@ -22,15 +22,7 @@ This includes wireframes and mockups and basic images for the branddesign.
 
 Link to the external project documentation: https://drive.google.com/open?id=1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
 
-## Database schema and initial design
 
-In order to make a good start with this project, careful consideration was first given to the exact data flows that will become part of the (dynamic) content.<br/>
-It has been decided to use a non-relational data structure (No SQL). <br/>
-This is because it is quite straightforward to link recipes (as a main part) to different subcategories (authors, geographic data, difference in dishes, etc.)<br/> 
-Based on the theory studied, the data structure was also chosen and this is good. to link to Heroku as a deployment platform.
-<br/>
-Drafts and the defensive version of the database schema can be found in the following folder:
-https://drive.google.com/open?id=1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
 
 ## Features
 
@@ -46,6 +38,16 @@ Existing Features (week 12 - 2019)
 Features Left to Implement (in a random order listed below)
 
 * Create a simple user login and move the 'edit / update' and 'delete' functions so that they are only available for a logged in user. (optional project requirement)
+
+## Database schema and initial design
+
+In order to make a good and deliberate start with this project, careful consideration was given first to the exact data flows that will become part of the (dynamic) content of the website.
+I have decided to use a non-relational data structure (No SQL). 
+This because it is quite straightforward to link recipes (as a main part / general data) to different subcategories (authors, geographic data, difference in dishes, etc.)
+Based on the studied theory, I came to the conclusion that the combination of Flask, MongoDB and Heroku will work well.
+
+Drafts and the defensive version of the database schema can be found in the following folder:
+https://drive.google.com/open?id=1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
 
 
 ## Technologies Used
