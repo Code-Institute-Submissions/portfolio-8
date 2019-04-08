@@ -40,43 +40,43 @@ Features Left to Implement (in a random order listed below)
 
 In this section all of the languages, frameworks, libraries, and other tools that have been used are mentioned. 
 
-*	HTML 5
+*	HTML 5 <br/>
     The website uses HTML5 as a fundamental basis for building the website.
 
-*	CSS3
+*	CSS3 <br/>
     The website uses CSS3 with regard to the styling of all elements within the website. For this a separate layout has been created within the page structure. 
     CSS is used for all content, including: images, layout of color and background, etc.
 
-*	Bootstrap 3.7.6.
+*	Bootstrap 3.7.6. <br/>
     The open-source Bootstrap framework has been used to implement some basic templates for forms, buttons and navigation. 
     Bootstrap has also been used to stand with a responsive design of the web page.
 
-*	Cloud9
+*	Cloud9 <br/>
     AWS (Amazon) Cloud9, a cloud-based integrated development environment (IDE) that has been used to write, run, and debug the code used for the website. 
-
-*	GitHub
+ 
+*	GitHub <br/>
     GitHub has been used for version control of the code by using Git. 
     During the realization of the project, Git was daily used.
 
-*	Core JavaScript 
+*	Core JavaScript<br/>
     Core Javascript has been used to use the event handling functionality's on specific buttons. 
 
-*	Jquery libraries 
+*	Jquery libraries<br/>
     Jquery has been used for most interactive parts. 
 
-*	Fontawesome
+*	Fontawesome<br/>
     Fontawesome as a toolkit has been used to the UX/UI, especialy for icon styling. 
 
-*   Heroku
+*   Heroku <br/>
     In this project data is actually transported between frontend and backend, GitHub pages are no longer sufficient as a project deploy location on its own. 
     That is why Heroku has been used to facilitate this functions of the application.
     During the realization of the project, Git deployment was daily used.
 
-*   Python / Flask
+*   Python / Flask <br/> 
     An important aspect of this project is the dynamic generation, modification and adaptation of data. 
     This is made possible by different routes between pages and data. The chosen framework to implement this is Flask.
 
-*   MongoDB
+*   MongoDB <br/>
     MongoDB is used to store the user input in a (non-relational) database. 
     In addition, the site is already filled with stored data that is retrieved from the mongoDB database.
 
@@ -158,7 +158,7 @@ During the development period a upload was made to GitHub after every 3 to 4 hou
 
 1. Builded the site on a local environment.
 2. Staged the files in the stage area.
-3. Perform push to Heroku (workspace / app)
+3. Perform push to Heroku (workspace / remote app)
 4. Perform push to Github (Git directory / repository).
 
 *   The website is available at the following link: https://personal-blog-2019.herokuapp.com/
