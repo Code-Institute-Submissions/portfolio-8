@@ -1,3 +1,5 @@
+![Welcome](https://raw.githubusercontent.com/nikl881/portfolio/master/static/img/readme.jpg)
+
 ## Italian CookBook project
 
 
