@@ -1,9 +1,10 @@
 ## Italian CookBook project
 
 
-This is the readme file for the online CookBook milestone project. 
-the main purpose of this website is to offer a so-called 'online cookbook'. The execution is a blog-like cookbook of specific dishes from the Italian kitchen. This data-driven website is dynamic in nature. This means that
-the user of the website can add, update, edit and remove recipes in accordance with the CRUD principles.
+This is the readme file for the online CookBook milestone project of Code Institute.<br/>
+The main purpose of this website is to show recipes in a so-called 'online cookbook'.<br/> 
+The chosen design and (layout)style is a blog-like cookbook of specific dishes from the Italian kitchen.<br/>
+This data-driven website is dynamic in nature, this means that the user of the website can add, update, edit and remove recipes in accordance with the CRUD principles.<br/>
 The user also can filter recipes based on the following criterea: Dish type, Author, Cuisine Region, Likes, Allergens, Difficulty and Cooking time. 
 The website is fitted for mobile, tablet and desktop (fully responsive). 
 
@@ -28,12 +29,12 @@ Existing Features (week 12 - 2019)
 * About page with background information about the function of the website and a image
 * Recipes page with information about the recipes, a filter function, a 'add your own recipe' function, a help function, and a overview of all recipes with image. 
 * Detailpage of a recipe, including: Dynamicaly generated recipe name, description, cuisine region, allergens information, author, likes, ingredients, image and cooking instruction. And modify options: edit and delete recipe. 
-* Edit page with the possibility to edit all functions mentioned in the previous feature description.
+* Edit page with the possibility to edit all functions mentioned in the previous feature description, including recipe image source. 
 * Contact page with the possibily to write and send a text message. 
 
 Features Left to Implement (in a random order listed below)
 
-* Create a simple user login and move the 'edit / update' and 'delete' functions so that they are only available for a logged in user. ; 
+* Create a simple user login and move the 'edit / update' and 'delete' functions so that they are only available for a logged in user. (optional project requirement)
 
 
 ## Technologies Used
