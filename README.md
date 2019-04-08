@@ -157,7 +157,7 @@ Below the main features described that are basic functions as currently availabl
 | 7 | Option field in form gave duplicate data when refreshing page  | Changed Flask routing paths to single injection instead of multiinjection in option form fields  |
 | 8 | Heroku could not load app from heroku page (git staging had no issues) | Changed Procfile to similair procfile on Heroku dashboard  |
 | 9 | Filter route wont show result of selected filter options | Still an open issue (4-4-19)  |
-| 10 | Security variable / PORT settings | Still an open issue (4-4-19)  |
+| 10 | Security variable / PORT settings - give a authentification error with the effect that the project won't load | Followed the lessons again to link the database to the working environment in cloud9. Reconfigured and resolved the issue.  |
 
 ## Work method 
 
