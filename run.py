@@ -1,5 +1,6 @@
 import os
 import json
+import pymongo
 from flask import Flask, render_template, request, flash, redirect, request, url_for, jsonify, json
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -8,10 +9,13 @@ from pprint import pprint
 
 app = Flask (__name__)
 
-app.config["MONGO_URI"] = 'mongodb+srv://root:pwvanr00t1@mycluster-yaqc7.mongodb.net/recipe_book?retryWrites=true'
+
+
 app.config["MONGO_DBNAME"] = 'recipe_book'
-app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
+app.config["MONGO_URI"] = os.getenv("MONGO_URI", "monogodb://localhost")
+
 mongo = PyMongo(app)
+
 
 
 ### routing the index page ###
@@ -65,16 +69,20 @@ def get_recipes():
 @app.route('/recipes')
 def recipes():
     
+    '''
+    
     recipes = mongo.db.recipes
     results = recipes.find('recipe_name')
     
     output = ''
     for recipes in recipes: 
         output +- recipes['recipe_name'] + ' - ' + str(recipes['recipe_description']) + '<br>'
+        
+      '''
     
     return render_template("recipes.html", page_title="Recipes", recipes=mongo.db.recipes.find())
         
-       
+     
               
 ### Follow page (show all recipes) ###                  
               
@@ -158,7 +166,7 @@ def contact():
  
    
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP', "0.0.0.0"),
+    app.run(host=os.environ.get('IP', "0.0.0.0."),
             port=int(os.environ.get("PORT", "5000")),
             debug=True)
 
