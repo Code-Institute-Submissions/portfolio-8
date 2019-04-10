@@ -62,7 +62,16 @@ def get_recipes():
     
     return render_template("detailpage.html", recipes=mongo.db.recipes.find())
         
+### upvotes/likes ###
 
+@app.route('/upvote/<recipe_id>')
+def upvotes(recipe_id):
+    mongo.db.recipes.find_one_and_update(
+        {'_id': ObjectId(recipe_id)},
+        {'$inc': {'upvotes': 1}}
+    )
+    return redirect(url_for('detailpage', recipe_id=recipe_id)) 
+            
     
 ### show recipes and filter categories on recipes.html page  ###   
 
@@ -117,7 +126,8 @@ def insert_recipe():
     recipe = mongo.db.recipes
     recipe.insert_one(request.form.to_dict())
     return redirect(url_for('recipes'))    
-            
+
+
 
 ###  edit recipe ###
 

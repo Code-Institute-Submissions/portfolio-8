@@ -2,23 +2,24 @@
 
 <h2> {{ page_title }} </h2>
 
+  
 
-<h2>{{recipe.recipe_name}} <button class="button button-like" type="button"  input id="likes" name="likes" onClick="onClick()">
-  <i class="fa fa-heart"></i>
+  
+<h2>{{recipe.recipe_name}} <button><a href="{{ url_for('upvotes', recipe_id=recipe._id) }}" type="button"  onClick="onClick()"><i class="fa fa-heart"></i></button></h2>  
 
-
- </h2> 
 
 <h3>{{recipe.description}}</h3>
 <br>
+
   <form>
+    
 <i class="fa fa-map-marker" style="font-size:15px"></i>   Cuisine Region: {{recipe.cuisine_region}}
 
 <i class="fas fa-allergies " style="font-size:15px; margin-left:7px;"></i>    Allergens:  {{recipe.allergens}}
 
 <div clas="upvotes">
 
-    <i class="fa fa-heart" aria-hidden="true"></i> Likes: <a id="clicks">0</a>
+    <i class="fa fa-heart" aria-hidden="true"></i> Likes: {{recipe.upvotes}} <a id="clicks"> </a>
     <input name="firstname" type="text" id="clicks"> 
 
 
