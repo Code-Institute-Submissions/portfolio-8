@@ -87,8 +87,8 @@ def recipes():
     if "author_name" in request.args:
         filter['author_name'] = request.args.get('author_name')
     
-    if "likes" in request.args:
-        filter['likes'] = request.args.get('likes')
+    if "upvotes" in request.args:
+        filter['upvotes'] = request.args.get('upvotes')
         
     if "cuisine_region" in request.args:
         filter['cuisine_region'] = request.args.get('cuisine_region')
@@ -156,7 +156,7 @@ def update_recipe(recipe_id):
         'dish_type':request.form.get('dish_type'),
         'recipe_image': request.form.get('recipe_image'),
         'cooking_instruction' : request.form.get ('cooking_instruction'),
-        'likes' : request.form.get ('likes'),
+        'upvotes' : request.form.get ('upvotes'),
         'views' : request.form.get ('views'),
         
      

@@ -4,17 +4,17 @@
 
   
 
-  
-<h2>{{recipe.recipe_name}} <button><a href="{{ url_for('upvotes', recipe_id=recipe._id) }}" type="button"  onClick="onClick()"><i class="fa fa-heart"></i></button></h2>  
 
+<div><h2>{{recipe.recipe_name}} <a href="{{ url_for('upvotes', recipe_id=recipe._id) }}" type="button" style="color:#e77171; font-size:25px;" onClick="onClick()"><i class="fa fa-heart"></i></a></h2> </div> 
+</button>
 
-<h3>{{recipe.description}}</h3>
+<div><h3>{{recipe.description}}</h3></div>
+
 <br>
 
-  <form>
+  
     
 <i class="fa fa-map-marker" style="font-size:15px"></i>   Cuisine Region: {{recipe.cuisine_region}}
-
 <i class="fas fa-allergies " style="font-size:15px; margin-left:7px;"></i>    Allergens:  {{recipe.allergens}}
 
 <div clas="upvotes">
@@ -23,10 +23,10 @@
     <input name="firstname" type="text" id="clicks"> 
 
 
-    <i class="fa fa-user-circle" aria-hidden="true"> </i> Author: {{recipe.author_name}}
+    <i class="fa fa-user-circle" aria-hidden="true"></i> Author: {{recipe.author_name}}
     <input name="firstname" type="text"> 
 
-  </form>
+  
 
       <h3 class="my-3">Ingredients</h3>
       <p>{{recipe.ingredients}}</p>
