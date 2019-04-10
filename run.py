@@ -13,7 +13,7 @@ app = Flask (__name__)
 
 app.config["MONGO_DBNAME"] = 'recipe_book'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI", "monogodb://localhost")
-
+app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 mongo = PyMongo(app)
 
 
@@ -48,8 +48,9 @@ def about_member(member_name):
   
   
 
-### show recipe on detailpage (single recipe page)  ###     
-          
+### show recipe on detailpage (single recipe page)  ###   
+
+@app.route('/detailpage')          
 @app.route('/detailpage/<recipe_id>')
 def detailpage(recipe_id):
     recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
@@ -69,21 +70,33 @@ def get_recipes():
 @app.route('/recipes')
 def recipes():
     
-    '''
-    
-    recipes = mongo.db.recipes
-    results = recipes.find('recipe_name')
-    
-    output = ''
-    for recipes in recipes: 
-        output +- recipes['recipe_name'] + ' - ' + str(recipes['recipe_description']) + '<br>'
+    print(request.args)
+    filter = {} 
+    if "dish_type" in request.args:
+        filter['dish_type'] = request.args.get('dish_type')
         
-      '''
+    if "author_name" in request.args:
+        filter['author_name'] = request.args.get('author_name')
     
-    return render_template("recipes.html", page_title="Recipes", recipes=mongo.db.recipes.find())
+    if "likes" in request.args:
+        filter['likes'] = request.args.get('likes')
         
-     
-              
+    if "cuisine_region" in request.args:
+        filter['cuisine_region'] = request.args.get('cuisine_region')
+        
+    if "allergens" in request.args:
+        filter['allergens'] = request.args.get('allergens')
+        
+    if "difficulty" in request.args:
+        filter['difficulty'] = request.args.get('difficulty')  
+        
+    if "cooking_time" in request.args:
+        filter['cooking_time'] = request.args.get('cooking_time')   
+       
+    recipes=mongo.db.recipes.find(filter)
+    return render_template("recipes.html", page_title="Recipes", recipes=recipes)
+        
+          
 ### Follow page (show all recipes) ###                  
               
 @app.route('/recipesfollow')

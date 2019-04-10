@@ -1,5 +1,4 @@
-{% extends 'base.html' %} 
-{% block content %} 
+{% extends 'base.html' %} {% block content %} 
 
 <h2> {{ page_title }} </h2>
 
@@ -27,9 +26,6 @@
     <input name="firstname" type="text"> 
 
   </form>
- 
-  
- 
 
       <h3 class="my-3">Ingredients</h3>
       <p>{{recipe.ingredients}}</p>
@@ -38,7 +34,6 @@
   
 
 <div class="container">
-
 
   <h1 class="my-4">
     <small></small>
@@ -79,23 +74,27 @@
 
 </div>
 
-<script>
 
-$(function() {
-  $('.button-like')
-    .bind('click', function(event) {
-      $(".button-like").toggleClass("liked");
-    })
-});
-</script>
  <script type="text/javascript">
     var clicks = 0;
     function onClick() {
         clicks += 1;
         document.getElementById("clicks").innerHTML = clicks;
     };
-    </script>
-    
+   
+function clickCounter() {
+  if (typeof(Storage) !== "clicked") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "Likes: " + localStorage.clickcount ;
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
 
 
 {% endblock %}

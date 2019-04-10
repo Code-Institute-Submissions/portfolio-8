@@ -30,6 +30,7 @@
 
   <h2>Filter recipes</h2>
   
+     <form>
   
     <div class="row">
       <div class="col-sm-3">
@@ -49,7 +50,7 @@
      <div class="col-sm-3">
          <div class="form-group">
       <label for="exampleFormControlSelect2"><i class="fa fa-user" style="font-size:15px"></i> Author</label>
-       <select multiple class="form-control" name="dish_type" id="dish_type">
+       <select multiple class="form-control" name="author_name" id="author_name">
         <option>Anna</option>
         <option>Anthony</option>
         <option>Niels</option>
@@ -118,16 +119,25 @@
       
       
       </div>
-     
 </div>    
-    
     
     </div>
   </div>
 
 
-  <a class="btn btn-primary-results" type="submit" name="action" href="/recipes" role="button"> Show results
-     </a>
+  <input class="btn btn-primary-add" type="submit" name="action" role="button" value="show "</input>
+  
+  
+  <a class="btn-nw" href="recipes" role="button" aria-haspopup="true" aria-expanded="false">
+    reset
+  </a>
+  
+  
+
+  
+  
+</form>
+
 
   <p>You can see the results of your filtered preferences below in the recipes list &darr;</p>
 

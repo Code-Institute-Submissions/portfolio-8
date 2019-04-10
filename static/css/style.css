@@ -366,6 +366,7 @@ width:400px;
 
 .btn{
     color: white;
+    vertical-align: 0; 
 }
 
 .btn-primary1{
@@ -403,6 +404,33 @@ btn btn-delete2{
 }
 
 
+
+
+
+.btn-er{
+    margin-bottom: 12px; 
+     font-size: 14px;
+    font-weight: 800;
+    padding: 15px 25px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: green; 
+    border-radius: 0;
+    font-family: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn-nw{
+    font-size: 14px;
+    font-weight: 800;
+    padding: 18px 25px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: grey; 
+    margin-top: 15px; 
+    font-family: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 body{
     font-size: 18px; 
