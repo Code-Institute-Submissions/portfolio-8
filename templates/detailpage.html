@@ -3,17 +3,13 @@
 <h2> {{ page_title }} </h2>
 
   
-
-
 <div><h2>{{recipe.recipe_name}} <a href="{{ url_for('upvotes', recipe_id=recipe._id) }}" type="button" style="color:#e77171; font-size:25px;" onClick="onClick()"><i class="fa fa-heart"></i></a></h2> </div> 
 </button>
 
 <div><h3>{{recipe.description}}</h3></div>
-
 <br>
 
-  
-    
+
 <i class="fa fa-map-marker" style="font-size:15px"></i>   Cuisine Region: {{recipe.cuisine_region}}
 <i class="fas fa-allergies " style="font-size:15px; margin-left:7px;"></i>    Allergens:  {{recipe.allergens}}
 
@@ -22,11 +18,8 @@
     <i class="fa fa-heart" aria-hidden="true"></i> Likes: {{recipe.upvotes}} <a id="clicks"> </a>
     <input name="firstname" type="text" id="clicks"> 
 
-
     <i class="fa fa-user-circle" aria-hidden="true"></i> Author: {{recipe.author_name}}
     <input name="firstname" type="text"> 
-
-  
 
       <h3 class="my-3">Ingredients</h3>
       <p>{{recipe.ingredients}}</p>
@@ -42,10 +35,8 @@
   <div class="row">
     <div class="col-md-8">
       <img class="img-fluid" src="{{recipe.recipe_image}}" alt=""> 
-  
-     
+
     </div>
-    
     
     <div class="col-md-4">
       <h3 class="my-3">Preperation</h3>
@@ -60,22 +51,13 @@
     <div>
      <br>
     </div>
- 
-
-     
 
      </div>
-     
   </div>
 
-
-
 </div>
 
-
 </div>
-
-
  <script type="text/javascript">
     var clicks = 0;
     function onClick() {
@@ -96,6 +78,5 @@ function clickCounter() {
   }
 }
 </script>
-
 
 {% endblock %}

@@ -1,3 +1,5 @@
+/*--------------------------------------------Bootstrap columns*/
+
 .col-md-7{
     margin-bottom: 50px; 
 }
@@ -27,9 +29,7 @@
     margin-top: 500px; 
 }
 
-.post-preview > a > .post-subtitle{
-    color:#f0a317;
-}
+
 
 my-3 p{
     margin-top: 0px;
@@ -78,6 +78,32 @@ h5{
     
 }  
 
+.menu-container{
+    height: 400px; 
+}
+
+.container-heading{
+    margin-top: 100px; 
+}
+
+.form-control{
+    width: 200px; 
+
+}
+
+.col-sm-3{
+    max-width: none; 
+}
+
+.row-filter{
+    margin-left: 0;
+    margin-right: 0; 
+    background-color: #f5f5f5; 
+}
+
+/*--------------------------------------------Styling detailpage*/
+
+
 .recipe1{
     background-image: url(/static/img/dish-img1.jpg);
     text-align: left;
@@ -104,50 +130,7 @@ h5{
 }
 
 
-.recipe2{
-    text-align: left;
-    background-image: url(/static/img/dish-img2.jpg);
-    color: white;
-    font-weight: bold;
-      height: 300px; 
-    
-
-}
-.recipe3{
-    text-align: left;
-    background-image: url(/static/img/dish-img3.jpg);
-    color: white;
-    font-weight: bold;
-      height: 300px; 
-
-}
-
-.recipe4{
-    text-align: left;
-    background-image: url(/static/img/dish-img4.jpg);
-    color: white;
-    font-weight: bold;
-      height: 300px; 
-
-}
-
-.recipe5{
-    text-align: left;
-    background-image: url(/static/img/dish-img5.jpg);
-    color: white;
-    font-weight: bold;
-      height: 300px; 
-
-}
-
-.recipe6{
-    text-align: left;
-    background-image: url(/static/img/dish-img6.jpg);
-    color: white;
-    font-weight: bold;
-      height: 300px; 
-
-}
+/*--------------------------------------------Custom form styling*/
 
 
 .form-inline{
@@ -173,7 +156,7 @@ h5{
     margin-top: 15px;
 }
 
-
+/*-------------------------------------------- Blocks styling*/
 
 .textual-inner {
     width: 100%;
@@ -229,6 +212,27 @@ h5{
     text-transform: uppercase;
     font-weight: 700;
 }
+
+.post-preview > a > .post-subtitle{
+    color:#f0a317;
+}
+
+body{
+    font-size: 18px; 
+}
+
+.card-body a{
+
+    color:white;
+    margin-left: 5px;
+    font-size: 25px; 
+    
+}
+.exampleFormControlSelect2{
+    color:gold;
+}
+
+
 
 .recipeboxdetail{
 
@@ -298,155 +302,7 @@ width:400px;
     height: 100px
 }
 
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
-}
-
-
-
-
-#img-upload{
-    width: 100%;
-}
-
-.menu-container{
-    height: 400px; 
-}
-
-.container-heading{
-    margin-top: 100px; 
-}
-
-
-
-.form-control{
-    width: 200px; 
-
-}
-
-
-
-.col-sm-3{
-    max-width: none; 
-}
-
-
-.row-filter{
-    margin-left: 0;
-    margin-right: 0; 
-    background-color: #f5f5f5; 
-}
-
-
-.h2, h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.btn-file{
-    background-color: #0085a1; 
-    border-color: #0085a1; 
-}
-
-.btn{
-    color: white;
-    vertical-align: 0; 
-}
-
-.btn-primary1{
-    margin-top: 18px;
-}
-
-
-
-.mod-buttons{
-    margin-top: 250px;
-    background-color: red;
-}
-
-my-4{
-    margin-top:50px;
-}
-
-btn btn-edit1{
-    background-color: red;
-    
-}
-
-btn btn-delete2{
-    background-color:red;
-}
-
-
-
-.card-body{
-    background-color: #7bb698; 
-    color:white;
-    margin-bottom: 12px; 
-    
-    
-}
-
-
-
-
-
-.btn-er{
-    margin-bottom: 12px; 
-     font-size: 14px;
-    font-weight: 800;
-    padding: 15px 25px;
-    color: white;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background-color: green; 
-    border-radius: 0;
-    font-family: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.btn-nw{
-    font-size: 14px;
-    font-weight: 800;
-    padding: 18px 25px;
-    color: white;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background-color: grey; 
-    margin-top: 15px; 
-    font-family: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-body{
-    font-size: 18px; 
-}
-
-.card-body a{
-
-    color:white;
-    margin-left: 5px;
-    font-size: 25px; 
-    
-}
-
-.exampleFormControlSelect2{
-    color:gold;
-}
+/*-------------------------------------------- Button styling*/
 
 .btn:not{
     cursor: none;
@@ -465,6 +321,7 @@ font-size: 20px;
   transition: all ease 0.4s;
   border:none;
 }
+
 
 .button-like span {
   margin-left: 0.5rem;
@@ -524,5 +381,103 @@ background-color: #d84129;
   margin: 4px 2px;
   cursor: pointer;
   font-weight: bold;
+}
+
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+
+#img-upload{
+    width: 100%;
+}
+
+
+
+.h2, h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.btn-file{
+    background-color: #0085a1; 
+    border-color: #0085a1; 
+}
+
+.btn{
+    color: white;
+    vertical-align: 0; 
+}
+
+.btn-primary1{
+    margin-top: 18px;
+}
+
+.mod-buttons{
+    margin-top: 250px;
+    background-color: red;
+}
+
+my-4{
+    margin-top:50px;
+}
+
+btn btn-edit1{
+    background-color: red;
+    
+}
+
+btn btn-delete2{
+    background-color:red;
+}
+
+.card-body{
+    background-color: #7bb698; 
+    color:white;
+    margin-bottom: 12px; 
+    
+}
+
+.btn-er{
+    margin-bottom: 12px; 
+     font-size: 14px;
+    font-weight: 800;
+    padding: 15px 25px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: green; 
+    border-radius: 0;
+    font-family: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn-nw{
+    font-size: 14px;
+    font-weight: 800;
+    padding: 18px 25px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: grey; 
+    margin-top: 15px; 
+    font-family: 'Calibri', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 

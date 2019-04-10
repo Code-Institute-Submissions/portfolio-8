@@ -10,6 +10,7 @@ from pprint import pprint
 app = Flask (__name__)
 
 
+app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 
 app.config["MONGO_DBNAME"] = 'recipe_book'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI", "monogodb://localhost")
@@ -113,8 +114,6 @@ def recipesfollow():
         return render_template("recipesfollow.html", page_title="Second recipe page")               
               
 
-
-
 ### add a new recipe on addrecipes.html ###
 
 @app.route('/addrecipes')
@@ -126,7 +125,6 @@ def insert_recipe():
     recipe = mongo.db.recipes
     recipe.insert_one(request.form.to_dict())
     return redirect(url_for('recipes'))    
-
 
 
 ###  edit recipe ###
@@ -182,10 +180,7 @@ def contact():
 
 
 
-
-
 ### run location ### 
- 
  
    
 if __name__ == '__main__':
