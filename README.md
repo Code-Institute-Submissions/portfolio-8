@@ -38,6 +38,7 @@ Existing Features (week 12 - 2019)
 
 Features Left to Implement 
 
+* Add italian wine categories and collection based on same filters as the recipes (the site will be expanded and actually used)
 * Create a simple user login and move the 'edit / update' and 'delete' functions so that they are only available for a logged in user. (optional project requirement)
 
 ## Database schema and initial design
