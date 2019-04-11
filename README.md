@@ -28,9 +28,10 @@ Link to the external project documentation: https://drive.google.com/open?id=1-J
 
 Existing Features (week 12 - 2019) 
 
-* Landing page with a list of recently added recipes (clickable overview)
+* Landing page with a list of recently added recipes (clickable overview) (dynamically loaded recipes, images and author name of the dish.)
 * About page with background information about the function of the website and a image
 * Recipes page with information about the recipes, a filter function, a 'add your own recipe' function, a help function, and a overview of all recipes with image. 
+* Categories filter
 * Detailpage of a recipe, including: Dynamicaly generated recipe name, description, cuisine region, allergens information, author, likes, ingredients, image and cooking instruction. And modify options: edit and delete recipe. 
 * Edit page with the possibility to edit all functions mentioned in the previous feature description, including recipe image source. 
 * Contact page with the possibily to write and send a text message. 
@@ -44,9 +45,9 @@ Features Left to Implement
 In order to make a good and deliberate start with this project, careful consideration was given first to the exact data flows that will become part of the (dynamic) content of the website.
 I have decided to use a non-relational data structure (No SQL). 
 This because it is quite straightforward to link recipes (as a main part / general data) to different subcategories (authors, geographic data, difference in dishes, etc.)
-Based on the studied theory, I came to the conclusion that the combination of Flask, MongoDB and Heroku will work well.
+Based on the studied theory of the Data Centric module, I came to the conclusion that the combination of Flask, MongoDB and Heroku will work well.
 
-Drafts and the final version of the database schema can be found in the following folder:
+The database schema can be found in the following folder:
 https://drive.google.com/open?id=1-JhsaICva--uwgd_QD44ifeaJxX9_GPm
 
 
@@ -116,6 +117,7 @@ Site viewed and tested in the following browsers:
 
     * Firefox
     * Chrome
+    * Safari 
     * Internet Explorer    
     
 Mockups and sketches were also used to continuously build and deliver in accordance to the initial plan and design of the website.

@@ -1,3 +1,5 @@
+### import tools and packages ###
+
 import os
 import json
 import pymongo
@@ -7,8 +9,10 @@ from bson.objectid import ObjectId
 from pprint import pprint
 
 
-app = Flask (__name__)
+### connections to db  ###
 
+
+app = Flask (__name__)
 
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 
@@ -16,7 +20,6 @@ app.config["MONGO_DBNAME"] = 'recipe_book'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI", "monogodb://localhost")
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 mongo = PyMongo(app)
-
 
 
 ### routing the index page ###
@@ -159,10 +162,8 @@ def update_recipe(recipe_id):
         
      
     })
-    
     return redirect(url_for('get_recipes'))
   
-
 ### delete a recipe ### 
 
 @app.route('/delete_recipe/<recipe_id>')
