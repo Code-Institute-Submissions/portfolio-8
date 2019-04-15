@@ -98,11 +98,14 @@ In this section all of the languages, frameworks, libraries, and other tools tha
 
 
 
+
 ## Testing
 
 Various methods have been used to test the code of the website. During development, there has been continuously tested on the quality of the code. 
 This has been done by checking the correct functionality of the code on different screensizes, different resolutions,
 different devices (mobile, tablet, desktop). This approach is used from the start to the end of the realization of the project.
+
+PEP8 was used to check the quality of the python code. This is an online validator to check whether the code complies with the PEP8 directive.
 
 
 The code has been tested on the following devices and is fitted for purpose on a laptop, desktop or large desktop: 
@@ -147,6 +150,9 @@ Below the main features described that are basic functions as currently availabl
     * Send (feedback) message using the form. 
 
 
+
+
+
 ## Issuelist 
 
 | Issue number    | Description     | Implemented Solution  |
@@ -159,7 +165,7 @@ Below the main features described that are basic functions as currently availabl
 | 6 | Database data is not shown on front-end   | Changed the @app.route with the correct paths. Issue was that the data was searched in the wrong db collection  |
 | 7 | Option field in form gave duplicate data when refreshing page  | Changed Flask routing paths to single injection instead of multiinjection in option form fields  |
 | 8 | Heroku could not load app from heroku page (git staging had no issues) | Changed Procfile to similair procfile on Heroku dashboard  |
-| 9 | Filter route wont show result of selected filter options | Still an open issue (4-4-19)  |
+| 9 | Filter route wont show result of selected filter options | Changed the route from base.html   |
 | 10 | Security variable / PORT settings - give a authentification error with the effect that the project won't load | Followed the lessons again to link the database to the working environment in cloud9. Reconfigured and resolved the issue.  |
 
 ## Work method 

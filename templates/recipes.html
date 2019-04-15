@@ -1,13 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 
 
-
 <h2> {{ page_title }} </h2>
 <p>
     Here you can find different recipes that I have collected over the years. 
     My grandmother taught me how to cook Italian a long time ago. 
     Many of her classics are included in this online cookbook. Other recipes i have found during trips to Italy.
-    I would realy appreciate it if you added new recipes to the database! Of course I am also curious if you enjoyed the recipes. Please give a like if you enjoyed it.
+    I would realy appreciate it if you added new recipes to the database! Of course I am also curious if you enjoyed the recipes. Please give the recipe a like if you enjoyed it.
   
 </p>
 
@@ -28,7 +27,6 @@
 
     </form>
   </div>
-
 
 
   <h2>Filter recipes</h2>
@@ -70,7 +68,6 @@
       </select>
       </div>
   </div>
-  
   
    <div class="row">
   
@@ -119,32 +116,20 @@
         <option>45 - 120 min. </option>
       </select>
       
-      
-      
       </div>
-</div>    
+    </div>    
     
     </div>
   </div>
 
-
   <input class="btn btn-primary-add" type="submit" name="action" role="button" value="show "</input>
-  
-  
   <a class="btn-nw" href="recipes" role="button" aria-haspopup="true" aria-expanded="false">
     reset
   </a>
-  
-  
 
-  
-  
 </form>
 
-
   <p>You can see the results of your filtered preferences below in the recipes list &darr;</p>
-
-
 
 <div class="col s3">
 
@@ -171,9 +156,8 @@
         </div>
     </div>
     </div>
-
-
     <script>
+    
       $(document).ready(function() {
         $("#myInput").on("keyup", function() {
           var value = $(this).val().toLowerCase();
