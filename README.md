@@ -151,8 +151,6 @@ Below the main features described that are basic functions as currently availabl
 
 
 
-
-
 ## Issuelist 
 
 | Issue number    | Description     | Implemented Solution  |
@@ -184,7 +182,16 @@ During the development period a upload was made to GitHub after every 3 to 4 hou
 3. Perform push to Heroku (workspace / remote app)
 4. Perform push to Github (Git directory / repository).
 
-*   The website is available at the following link: https://personal-blog-2019.herokuapp.com/
+
+Because this project has a dynamic and data-driven design, it was decided to use Heroku to host this python project. The following method has been used to achieve a good deployment:
+
+1. Set up the initial app.
+2. Link the local Git repository to Heroku.
+3. Create a requirements.txt file, which contains a list of the project dependencies.
+4. And finally, created a Procfile, the file that tells Heroku how to run the project.
+
+
+*   The live version of the project is available at the following link: https://personal-blog-2019.herokuapp.com/
 
 ## Credits
 
