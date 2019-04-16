@@ -84,25 +84,27 @@ def upvotes(recipe_id):
 @app.route('/')
 @app.route('/recipes')
 def recipes():
-    valid_args = [
-        'dish_type',
-        'author_name',
-        'upvotes',
-        'cuisine_region',
-        'allergens',
-        'difficulty',
-        'cooking_time',
-    ]
 
+    print(request.args)
     filter = {}
-
-    for arg in valid_args:
-        filter[arg] = request.args.get(arg)
+    if "dish_type" in request.args:
+        filter['dish_type'] = request.args.get('dish_type')
+    if "author_name" in request.args:
+        filter['author_name'] = request.args.get('author_name')
+    if "likes" in request.args:
+        filter['likes'] = request.args.get('likes')
+    if "cuisine_region" in request.args:
+        filter['cuisine_region'] = request.args.get('cuisine_region')
+    if "allergens" in request.args:
+        filter['allergens'] = request.args.get('allergens')
+    if "difficulty" in request.args:
+        filter['difficulty'] = request.args.get('difficulty')
+    if "cooking_time" in request.args:
+        filter['cooking_time'] = request.args.get('cooking_time')
 
     recipes = mongo.db.recipes.find(filter)
-
-    return render_template("recipes.html", page_title="Recipes",
-                           recipes=recipes)
+    return render_template("recipes.html",
+                           page_title="Recipes", recipes=recipes)
 
 """Follow page (show all recipes)"""
 
