@@ -28,17 +28,17 @@ Link to the external project documentation: https://drive.google.com/open?id=1-J
 
 Existing Features (week 12 - 2019) 
 
-* Landing page with a list of recently added recipes (clickable overview) (dynamically loaded recipes, images and author name of the dish.)
-* About page with background information about the function of the website and a image
+* Landing page with a list of recently added recipes (clickable overview) (dynamically loaded recipes, images and author name).
+* About page with background information about the purpose of the website.
 * Recipes page with information about the recipes, a filter function, a 'add your own recipe' function, a help function, and a overview of all recipes with image. 
-* Categories filter
+* Categories filter.
 * Detailpage of a recipe, including: Dynamicaly generated recipe name, description, cuisine region, allergens information, author, likes, ingredients, image and cooking instruction. And modify options: edit and delete recipe. 
 * Edit page with the possibility to edit all functions mentioned in the previous feature description, including recipe image source. 
 * Contact page with the possibily to write and send a text message. 
 
 Features Left to Implement 
 
-* Add italian wine categories and collection based on same filters as the recipes (the site will be expanded and actually used in the future)
+* Add italian wine categories and collection based on same filters as the recipes (the site will be expanded and actually used in the future).
 * Create a simple user login and move the 'edit / update' and 'delete' functions so that they are only available for a logged in user. 
 
 ## Database schema and initial design
