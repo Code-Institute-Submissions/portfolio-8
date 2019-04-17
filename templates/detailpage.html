@@ -1,7 +1,5 @@
 {% extends 'base.html' %} {% block content %} 
 
-<h2> {{ page_title }} </h2>
-
   
 <div><h2>{{recipe.recipe_name}} <a href="{{ url_for('upvotes', recipe_id=recipe._id) }}" type="button" style="color:#e77171; font-size:25px;" onClick="onClick()"><i class="fa fa-heart"></i></a></h2> </div> 
 </button>

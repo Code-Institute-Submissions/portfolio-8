@@ -13,7 +13,6 @@ from pprint import pprint
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 
 app.config["MONGO_DBNAME"] = 'recipe_book'
 app.config["MONGO_URI"] = os.getenv("MONGO_URI", "monogodb://localhost")
@@ -57,7 +56,8 @@ def about_member(member_name):
 @app.route('/detailpage/<recipe_id>')
 def detailpage(recipe_id):
     recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
-    return render_template("detailpage.html", recipe=recipe)
+    return render_template("detailpage.html",
+                           page_title="detailpage", recipe=recipe)
 
 
 @app.route('/')
@@ -84,27 +84,27 @@ def upvotes(recipe_id):
 @app.route('/')
 @app.route('/recipes')
 def recipes():
-    valid_args = [
-        'dish_type',
-        'author_name',
-        'upvotes',
-        'cuisine_region',
-        'allergens',
-        'difficulty',
-        'cooking_time',
-    ]
 
+    print(request.args)
     filter = {}
-
-    for arg in valid_args:
-        filter[arg] = request.args.get(arg)
-
-    print(filter)
+    if "dish_type" in request.args:
+        filter['dish_type'] = request.args.get('dish_type')
+    if "author_name" in request.args:
+        filter['author_name'] = request.args.get('author_name')
+    if "likes" in request.args:
+        filter['likes'] = request.args.get('likes')
+    if "cuisine_region" in request.args:
+        filter['cuisine_region'] = request.args.get('cuisine_region')
+    if "allergens" in request.args:
+        filter['allergens'] = request.args.get('allergens')
+    if "difficulty" in request.args:
+        filter['difficulty'] = request.args.get('difficulty')
+    if "cooking_time" in request.args:
+        filter['cooking_time'] = request.args.get('cooking_time')
 
     recipes = mongo.db.recipes.find(filter)
-
-    return render_template("recipes.html", page_title="Recipes",
-                           recipes=recipes)
+    return render_template("recipes.html",
+                           page_title="Recipes", recipes=recipes)
 
 """Follow page (show all recipes)"""
 
@@ -173,6 +173,7 @@ def delete_recipe(recipe_id):
 
 
 """routing for the contact page"""
+app.secret_key = 'temp_pw'
 
 
 @app.route('/contact', methods=["GET", "POST"])
@@ -188,4 +189,3 @@ def contact():
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', "0.0.0.0."),
             port=int(os.environ.get("PORT", "5000")), debug=True)
-
